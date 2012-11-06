@@ -1,15 +1,16 @@
 <?php
 /*
-Plugin Name: TODO
-Plugin URI: TODO
-Description: TODO
-Version: 1.0
-Author: TODO
-Author URI: TODO
-Author Email: TODO
-License:
 
-  Copyright 2012 TODO (email@domain.com)
+Plugin Name: WordPress Admin Panel Pack
+Plugin URI: http://github.com/...
+Description: Admin panel pack for WordPress
+Author: Ryan Holder
+Version: 0.1
+Author URI: http://ryanholder.com/
+
+License: GPLv2 ->
+
+  Copyright 2012 Ryan Holder (ryan@ryanholder.com)
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License, version 2, as 
@@ -26,8 +27,11 @@ License:
   
 */
 
-// TODO: rename this class to a proper name for your plugin
-class PluginName {
+define( 'WAP_PACK_DIR', dirname( __FILE__ ) );
+define( 'WAP_PACK_URL', plugin_dir_url( __FILE__ ));
+define( 'WAP_PACK_VERSION', "0.1");
+
+class WordPressAdminPanelPack {
 	 
 	/*--------------------------------------------*
 	 * Constructor
@@ -37,9 +41,8 @@ class PluginName {
 	 * Initializes the plugin by setting localization, filters, and administration functions.
 	 */
 	function __construct() {
-	
-		// TODO: replace "plugin-name-locale" with a unique value for your plugin
-		load_plugin_textdomain( 'plugin-name-locale', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
+
+		load_plugin_textdomain( 'wappack', false, WAP_PACK_DIR . '/assets/languages' );
 		
 		// Register admin styles and scripts
 		add_action( 'admin_print_styles', array( $this, 'register_admin_styles' ) );
@@ -63,8 +66,9 @@ class PluginName {
 	     * For more information: 
 	     * http://codex.wordpress.org/Plugin_API#Hooks.2C_Actions_and_Filters
 	     */
-	    add_action( 'TODO', array( $this, 'action_method_name' ) );
-	    add_filter( 'TODO', array( $this, 'filter_method_name' ) );
+
+
+	    add_action( 'admin_head', array( $this, 'wappack_admin_head' ) );
 
 	} // end constructor
 	
@@ -90,9 +94,8 @@ class PluginName {
 	 * Registers and enqueues admin-specific styles.
 	 */
 	public function register_admin_styles() {
-	
-		// TODO change 'plugin-name' to the name of your plugin
-		wp_enqueue_style( 'plugin-name-admin-styles', plugins_url( 'plugin-name/css/admin.css' ) );
+
+		wp_enqueue_style( 'wappack-admin-styles', WAP_PACK_URL .  'assets/stylesheets/admin.css' );
 	
 	} // end register_admin_styles
 
@@ -100,9 +103,8 @@ class PluginName {
 	 * Registers and enqueues admin-specific JavaScript.
 	 */	
 	public function register_admin_scripts() {
-	
-		// TODO change 'plugin-name' to the name of your plugin
-		wp_enqueue_script( 'plugin-name-admin-script', plugins_url( 'plugin-name/js/admin.js' ) );
+
+		wp_enqueue_script( 'wappack-admin-scripts', WAP_PACK_URL . 'assets/javascripts/admin.js' );
 	
 	} // end register_admin_scripts
 	
@@ -110,9 +112,8 @@ class PluginName {
 	 * Registers and enqueues plugin-specific styles.
 	 */
 	public function register_plugin_styles() {
-	
-		// TODO change 'plugin-name' to the name of your plugin
-		wp_enqueue_style( 'plugin-name-plugin-styles', plugins_url( 'plugin-name/css/display.css' ) );
+
+		//wp_enqueue_style( 'wappack-plugin-styles', WAP_PACK_URL .  'assets/stylesheets/display.css' );
 	
 	} // end register_plugin_styles
 	
@@ -120,9 +121,8 @@ class PluginName {
 	 * Registers and enqueues plugin-specific scripts.
 	 */
 	public function register_plugin_scripts() {
-	
-		// TODO change 'plugin-name' to the name of your plugin
-		wp_enqueue_script( 'plugin-name-plugin-script', plugins_url( 'plugin-name/js/display.js' ) );
+
+        //wp_enqueue_script( 'wappack-plugin-scripts', WAP_PACK_URL . 'assets/javascripts/display.js' );
 	
 	} // end register_plugin_scripts
 	
@@ -138,23 +138,10 @@ class PluginName {
 	 *		  Action Reference:  http://codex.wordpress.org/Plugin_API/Action_Reference
 	 *
 	 */
-	function action_method_name() {
+	function wappack_admin_head() {
     	// TODO define your action method here
 	} // end action_method_name
-	
-	/**
-	 * Note:  Filters are points of execution in which WordPress modifies data
-	 *        before saving it or sending it to the browser.
-	 *
-	 *		  WordPress Filters: http://codex.wordpress.org/Plugin_API#Filters
-	 *		  Filter Reference:  http://codex.wordpress.org/Plugin_API/Filter_Reference
-	 *
-	 */
-	function filter_method_name() {
-	    // TODO define your filter method here
-	} // end filter_method_name
-  
+
 } // end class
 
-// TODO: update the instantiation call of your plugin to the name given at the class definition
-new PluginName();
+new WordPressAdminPanelPack();
