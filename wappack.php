@@ -44,7 +44,8 @@ class WordPressAdminPanelPack {
 	 */
 	function __construct() {
 
-		load_plugin_textdomain( 'wappack', false, WAP_PACK_DIR . '/assets/languages' );
+        // load plugin text domain
+		add_action( 'init', array( $this, 'textdomain' ) );
 		
 		// Register admin styles and scripts
 		add_action( 'admin_print_styles', array( $this, 'register_admin_styles' ) );
@@ -68,13 +69,15 @@ class WordPressAdminPanelPack {
 	     * http://codex.wordpress.org/Plugin_API#Hooks.2C_Actions_and_Filters
 	     */
 
-        /*
-         * This adds to the admin screen help panel listing all page hooks
-         */
-
 	    add_action( 'admin_head', array( $this, 'wappack_admin_head' ) );
 
+        add_action( 'wp_before_admin_bar_render', array( $this, 'wappack_admin_bar_render' ) );
+
         add_action( 'admin_menu', array( $this, 'wappack_disable_default_dashboard_widgets' ) );
+
+        add_action( 'admin_menu', array( $this, 'wappack_disable_admin_menu_items' ) );
+
+        add_filter( 'admin_body_class' , array( $this, 'wappack_add_admin_body_class' ) );
 
 	} // end constructor
 	
@@ -95,7 +98,16 @@ class WordPressAdminPanelPack {
 	public function deactivate( $network_wide ) {
 		// TODO define deactivation functionality here		
 	} // end deactivate
-	
+
+    /**
+     * Loads the plugin text domain for translation
+     */
+    public function textdomain() {
+
+        load_plugin_textdomain( 'wappack', false, WAP_PACK_DIR . '/assets/languages' );
+
+    }
+
 	/**
 	 * Registers and enqueues admin-specific styles.
 	 */
@@ -136,21 +148,62 @@ class WordPressAdminPanelPack {
 	 * Core Functions
 	 *---------------------------------------------*/
 
+
 	function wappack_admin_head() {
     	// TODO define your action method here
-	} // end action_method_name
+	} // end wappack_admin_head
+
+
+    /** Removing menu options from the Admin Bar
+     * TODO I may want to remove the loading of styles and scipts for admin bar in favor of my own - (see line 36-53 of class-wp-admin-bar.php)
+     *
+     */
+    function wappack_admin_bar_render() {
+        global $wp_admin_bar;
+
+//        $wp_admin_bar->remove_menu( 'wp-logo' );
+        $wp_admin_bar->remove_menu( 'comments' );
+        $wp_admin_bar->remove_menu( 'new-content' );
+
+
+        /**
+         * Remove the sub menu items from the site-name menu
+         */
+        $wp_admin_bar->remove_menu( 'appearance' );
+        $wp_admin_bar->remove_menu( 'dashboard' );
+        $wp_admin_bar->remove_menu( 'edit-site' );
+
+//        $wp_admin_bar->remove_menu('view-site');
+
+
+    } // end wappack_admin_bar_render
 
     function wappack_disable_default_dashboard_widgets() {
+
         remove_meta_box( 'dashboard_right_now', 'dashboard', 'core' );
         remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'core' );
         remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'core' );
-        remove_meta_box( 'dashboard_plugins', 'dashboard', 'core' );
+//        remove_meta_box( 'dashboard_plugins', 'dashboard', 'core' );
         remove_meta_box( 'dashboard_quick_press', 'dashboard', 'core' );
         remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'core' );
         remove_meta_box( 'dashboard_primary', 'dashboard', 'core' );
         remove_meta_box( 'dashboard_secondary', 'dashboard', 'core' );
-    }
+
+    } // end wappack_disable_default_dashboard_widgets
+
+    function wappack_disable_admin_menu_items() {
+
+        remove_menu_page( 'separator1' );
+        remove_menu_page( 'separator2' );
+        remove_menu_page( 'separator-last' );
+
+    } // end wappack_disable_admin_menu_items
+
+    function wappack_add_admin_body_class( $classes ) {
+        $classes .= 'wappack-admin';
+        return $classes;
+   	} // end wappack_add_admin_body_class
 
 } // end class
 
-new WordPressAdminPanelPack();
+$plugin_name = new WordPressAdminPanelPack();
