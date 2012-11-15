@@ -34,7 +34,7 @@
 .wappack-admin #adminmenu .wp-submenu,
 .wappack-admin #adminmenu .wp-submenu-wrap,
 .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
-    width: 214px
+    width: 194px
 }
 
 .wappack-admin #adminmenu {
@@ -1143,8 +1143,8 @@ form.upgrade .hint {
 }
 
 #adminmenu .wp-submenu a {
-    font-size: 12px;
-    line-height: 18px
+    font-size: 14px;
+    line-height: 40px
 }
 
 #adminmenu a.menu-top, #adminmenu .wp-submenu-head {
@@ -1156,7 +1156,7 @@ form.upgrade .hint {
     display: none
 }
 
-.folded #adminmenu div.wp-submenu-head {
+.wappack-admin #adminmenu div.wp-submenu-head {
     display: block
 }
 
@@ -1166,12 +1166,13 @@ form.upgrade .hint {
 
 #adminmenu div.wp-menu-image {
     float: left;
-    width: 28px;
-    height: 28px
+    width: 24px;
+    height: 24px;
+    padding: 15px 10px;
 }
 
-.folded #adminmenu div.wp-menu-image {
-    width: 30px
+.wappack-admin #adminmenu div.wp-menu-image {
+    width: 24px
 }
 
 #adminmenu li {
@@ -1182,7 +1183,7 @@ form.upgrade .hint {
 
 #adminmenu a {
     display: block;
-    line-height: 18px;
+    line-height: 24px;
     padding: 2px 5px
 }
 
@@ -1205,8 +1206,8 @@ form.upgrade .hint {
     border-style: solid;
 }
 
-#adminmenu .wp-submenu ul {
-    padding: 4px 0
+.wappack-admin #adminmenu .wp-submenu ul {
+    padding: 0;
 }
 
 #adminmenu .wp-submenu a {
@@ -1225,8 +1226,9 @@ form.upgrade .hint {
     padding-left: 18px
 }
 
-.folded #adminmenu li li {
-    margin-left: 0
+.wappack-admin #adminmenu li li {
+    margin-left: 0;
+    border-bottom: 1px solid #d5d5d5;
 }
 
 .folded #adminmenu li li a {
@@ -1356,10 +1358,14 @@ form.upgrade .hint {
 }
 
 #adminmenu .wp-submenu .wp-submenu-head {
-    padding: 6px 4px 5px 10px;
+    padding: 0 10px;
+    line-height: 54px;
     cursor: default;
-    border-width: 1px 0;
-    border-style: solid
+    border-width: 0 0 1px;
+    border-style: solid;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    text-shadow: none;
 }
 
 #adminmenu li .wp-submenu-wrap {
@@ -1377,6 +1383,7 @@ form.upgrade .hint {
     position: absolute;
     top: 0;
     left: 65px;
+    margin: 0 10px;
 }
 
 #adminmenu li.wp-menu-open .wp-submenu-wrap {
