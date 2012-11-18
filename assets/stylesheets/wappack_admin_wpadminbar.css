@@ -110,8 +110,17 @@ html.wp-toolbar {
     height: 56px;
     line-height: 56px;
     display: block;
-    padding: 0 12px;
-    margin: 0
+    padding: 0 17px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.wappack-admin #wpadminbar .quicklinks #wp-admin-bar-site-name a {
+    font-size: 23px;
+    text-transform: uppercase;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    color: #fff;
+    padding: 0;
 }
 
 .wappack-admin #wpadminbar .menupop .ab-sub-wrapper, .wappack-admin #wpadminbar .shortlink-input {
@@ -199,7 +208,8 @@ html.wp-toolbar {
     background-image: none;
 }
 
-.wappack-admin #wpadminbar.nojs .ab-top-menu>li.menupop:hover>.ab-item, .wappack-admin #wpadminbar .ab-top-menu>li.menupop.hover>.ab-item {
+.wappack-admin #wpadminbar.nojs .ab-top-menu>li.menupop:hover>.ab-item,
+.wappack-admin #wpadminbar .ab-top-menu>li.menupop.hover>.ab-item {
     background: #fff;
     color: #333;
     text-shadow: none;
@@ -352,16 +362,17 @@ html.wp-toolbar {
 }
 
 .wappack-admin #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar>a img {
-    width: 16px;
-    height: 16px;
-    border: 1px solid #999;
+    width: 28px;
+    height: 28px;
+    border: none;
     padding: 0;
     background: #eee;
-    line-height: 52px;
+    line-height: 56px;
     vertical-align: middle;
-    margin: -3px 0 0 6px;
-    float: none;
-    display: inline
+    margin: 14px 10px 0 0;
+    float: left;
+    display: inline;
+    border-radius: 16px;
 }
 
 .wappack-admin #wpadminbar .quicklinks li img.blavatar {
@@ -474,11 +485,11 @@ html.wp-toolbar {
 }
 
 #wp-admin-bar-wp-logo>.ab-item .ab-icon {
-    width: 20px;
-    height: 20px;
-    margin: 18px 0;
-    background-image: url(../../../../../wp-includes/images/admin-bar-sprite.png?d=20111130);
-    background-position: 0 -76px;
+    width: 32px;
+    height: 32px;
+    margin: 14px 0;
+    background-image: url(../images/wappack-logo.png);
+    background-position: 0 0;
     background-repeat: no-repeat
 }
 

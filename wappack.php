@@ -74,9 +74,9 @@ class WordPressAdminPanelPack {
 
         add_action( 'wp_before_admin_bar_render', array( $this, 'wappack_admin_bar_render' ) );
 
-        add_action( 'admin_menu', array( $this, 'wappack_disable_default_dashboard_widgets' ) );
-
         add_action( 'admin_menu', array( $this, 'wappack_disable_admin_menu_items' ) );
+
+        add_action( 'admin_bar_menu', array( $this, 'wappack_admin_bar_custom_account_menu' ) );
 
         add_filter( 'admin_body_class' , array( $this, 'wappack_add_admin_body_class' ) );
 
@@ -160,7 +160,9 @@ class WordPressAdminPanelPack {
 
 
 	function wappack_admin_head() {
+
     	// TODO define your action method here
+
 	} // end wappack_admin_head
 
 
@@ -169,12 +171,12 @@ class WordPressAdminPanelPack {
      *
      */
     function wappack_admin_bar_render() {
+
         global $wp_admin_bar;
 
 //        $wp_admin_bar->remove_menu( 'wp-logo' );
         $wp_admin_bar->remove_menu( 'comments' );
         $wp_admin_bar->remove_menu( 'new-content' );
-
 
         /**
          * Remove the sub menu items from the site-name menu
@@ -182,24 +184,9 @@ class WordPressAdminPanelPack {
         $wp_admin_bar->remove_menu( 'appearance' );
         $wp_admin_bar->remove_menu( 'dashboard' );
         $wp_admin_bar->remove_menu( 'edit-site' );
-
 //        $wp_admin_bar->remove_menu('view-site');
 
-
     } // end wappack_admin_bar_render
-
-    function wappack_disable_default_dashboard_widgets() {
-
-        remove_meta_box( 'dashboard_right_now', 'dashboard', 'core' );
-        remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'core' );
-        remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'core' );
-//        remove_meta_box( 'dashboard_plugins', 'dashboard', 'core' );
-        remove_meta_box( 'dashboard_quick_press', 'dashboard', 'core' );
-        remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'core' );
-        remove_meta_box( 'dashboard_primary', 'dashboard', 'core' );
-        remove_meta_box( 'dashboard_secondary', 'dashboard', 'core' );
-
-    } // end wappack_disable_default_dashboard_widgets
 
     function wappack_disable_admin_menu_items() {
 
@@ -210,9 +197,37 @@ class WordPressAdminPanelPack {
     } // end wappack_disable_admin_menu_items
 
     function wappack_add_admin_body_class( $classes ) {
-        $classes .= 'wappack-admin';
+
+        $classes .= ' wappack-admin';
         return $classes;
+
    	} // end wappack_add_admin_body_class
+
+    function wappack_admin_bar_custom_account_menu( $wp_admin_bar ) {
+
+        $user_id      = get_current_user_id();
+       	$current_user = wp_get_current_user();
+       	$profile_url  = get_edit_profile_url( $user_id );
+
+       	if ( ! $user_id )
+       		return;
+
+       	$avatar = get_avatar( $user_id, 28 );
+       	$user_display_name  = sprintf( __('%1$s'), $current_user->display_name );
+       	$class  = empty( $avatar ) ? '' : 'with-avatar';
+
+       	$wp_admin_bar->add_menu( array(
+       		'id'        => 'my-account',
+       		'parent'    => 'top-secondary',
+       		'title'     => $avatar . $user_display_name,
+       		'href'      => $profile_url,
+       		'meta'      => array(
+       			'class'     => $class,
+       			'title'     => __('My Account'),
+       		),
+       	) );
+
+    }
 
 } // end class
 
