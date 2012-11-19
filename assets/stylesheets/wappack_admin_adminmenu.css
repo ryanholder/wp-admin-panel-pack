@@ -39,7 +39,7 @@
 
 .wappack-admin #adminmenu {
     clear: left;
-    margin: 0 10px;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -68,7 +68,7 @@
 
 .wappack-admin #adminmenu,
 .wappack-admin #adminmenu li.menu-top {
-    width: 44px;
+    width: 64px;
 }
 
 .inner-sidebar {
