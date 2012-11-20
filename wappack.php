@@ -46,7 +46,11 @@ class WordPressAdminPanelPack {
 
         // load plugin text domain
 		add_action( 'init', array( $this, 'textdomain' ) );
-		
+
+		// Deregister admin styles and scripts
+		add_action( 'admin_print_styles', array( $this, 'deregister_admin_styles' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'deregister_admin_scripts' ) );
+
 		// Register admin styles and scripts
 		add_action( 'admin_print_styles', array( $this, 'register_admin_styles' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_scripts' ) );
@@ -118,13 +122,37 @@ class WordPressAdminPanelPack {
 
     }
 
+    /**
+   	 * deregisters admin-specific styles.
+   	 */
+   	public function deregister_admin_styles() {
+        wp_deregister_style( 'admin-bar' );
+        wp_deregister_style( 'wp-admin' );
+        wp_deregister_style( 'colors' );
+        // TODO Use wp_admin_css_color to add my own color schemes @http://codex.wordpress.org/Function_Reference/wp_admin_css_color
+
+   	} // end deregister_admin_styles
+
+    /**
+   	 * Deregisters admin-specific JavaScript.
+   	 */
+   	public function deregister_admin_scripts() {
+
+   		//wp_enqueue_script( 'wappack-admin-scripts', WAP_PACK_URL . 'assets/javascripts/admin.js' );
+
+   	} // end deregister_admin_scripts
+
 	/**
 	 * Registers and enqueues admin-specific styles.
 	 */
 	public function register_admin_styles() {
 
-		wp_enqueue_style( 'wappack-admin-styles', WAP_PACK_URL .  'assets/stylesheets/admin.css' );
-	
+        wp_enqueue_style( 'wappack-wpadminbar', WAP_PACK_URL .  'assets/stylesheets/wappack-wpadminbar.css' );
+        wp_enqueue_style( 'wappack-admin', WAP_PACK_URL .  'assets/stylesheets/wappack-admin.css' );
+        wp_enqueue_style( 'wappack-admin-colors', WAP_PACK_URL .  'assets/stylesheets/wappack-admin-colors.css' );
+        wp_enqueue_style( 'wappack-admin-other', WAP_PACK_URL .  'assets/stylesheets/wappack-admin-other.css' );
+        wp_enqueue_style( 'wappack-adminmenu', WAP_PACK_URL .  'assets/stylesheets/wappack-adminmenu.css' );
+
 	} // end register_admin_styles
 
 	/**
