@@ -2,7 +2,7 @@
 
 
 Howdy! This is the CSS file that controls the
-Blue (classic) color style on the WordPress Dashboard.
+Gray (fresh) color style on the WordPress Dashboard.
 
 This file contains both LTR and RTL styles.
 
@@ -20,10 +20,6 @@ TABLE OF CONTENTS:
 html,
 .wp-dialog {
   background-color: #fff;
-}
-* html input,
-* html .widget {
-  border-color: #dfdfdf;
 }
 textarea,
 input[type="text"],
@@ -58,7 +54,7 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="url"]:focus,
 select:focus {
-  border-color: #d1e5ee;
+  border-color: #bbb;
 }
 kbd,
 code {
@@ -94,7 +90,7 @@ body > #upload-menu {
 #rightnow,
 div.dashboard-widget,
 #dashboard-widgets p.dashboard-widget-links {
-  border-color: #d1e5ee;
+  border-color: #ccc;
 }
 #poststuff .inside label.spam,
 #poststuff .inside label.deleted {
@@ -113,13 +109,11 @@ div.dashboard-widget,
 #postcustomstuff thead th {
   background-color: #F1F1F1;
 }
-#postcustomstuff table input,
-#postcustomstuff table textarea {
-  border-color: #dfdfdf;
-  background-color: #fff;
-}
 .widefat {
-  border-color: #D1E5EE;
+  border-color: #dfdfdf;
+  background-color: #f9f9f9;
+}
+textarea.widefat {
   background-color: #fff;
 }
 div.dashboard-widget-error {
@@ -169,34 +163,33 @@ h3.dashboard-widget-title small,
 .sidebar-name,
 #nav-menu-header,
 #nav-menu-footer,
-.menu-item-handle,
-#fullscreen-topbar {
-  background-color: #f5fafd;
+.menu-item-handle {
+  background-color: #f1f1f1;
   /* Fallback */
 
-  background-image: -ms-linear-gradient(top, #f7fcfe, #eff8ff);
+  background-image: -ms-linear-gradient(top, #f9f9f9, #ececec);
   /* IE10 */
 
-  background-image: -moz-linear-gradient(top, #f7fcfe, #eff8ff);
+  background-image: -moz-linear-gradient(top, #f9f9f9, #ececec);
   /* Firefox */
 
-  background-image: -o-linear-gradient(top, #f7fcfe, #eff8ff);
+  background-image: -o-linear-gradient(top, #f9f9f9, #ececec);
   /* Opera */
 
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7fcfe), to(#eff8ff));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#ececec));
   /* old Webkit */
 
-  background-image: -webkit-linear-gradient(top, #f7fcfe, #eff8ff);
+  background-image: -webkit-linear-gradient(top, #f9f9f9, #ececec);
   /* new Webkit */
 
-  background-image: linear-gradient(top, #f7fcfe, #eff8ff);
+  background-image: linear-gradient(top, #f9f9f9, #ececec);
   /* proposed W3C Markup */
 
 }
 .widget .widget-top,
 .postbox h3,
 .stuffbox h3 {
-  border-bottom-color: #D1E5EE;
+  border-bottom-color: #dfdfdf;
   text-shadow: #fff 0 1px 0;
   -moz-box-shadow: 0 1px 0 #fff;
   -webkit-box-shadow: 0 1px 0 #fff;
@@ -222,7 +215,7 @@ strong .post-com-count span {
   color: #000;
 }
 .wrap h2 {
-  color: #174f69;
+  color: #464646;
 }
 .wrap .add-new-h2 {
   background: #f1f1f1;
@@ -242,7 +235,7 @@ strong .post-com-count span {
 }
 .alternate,
 .alt {
-  background-color: #f7fcfe;
+  background-color: #fcfcfc;
 }
 .available-theme a.screenshot {
   background-color: #f1f1f1;
@@ -294,14 +287,14 @@ td.help {
   color: #9a9a9a;
 }
 .ui-autocomplete {
-  background-color: #eff8ff;
-  border-color: #d1e5ee;
+  background-color: #efefef;
+  border-color: #bbb;
 }
 .ui-autocomplete li a.ui-state-hover {
-  background-color: #def1ff;
+  background-color: #ddd;
 }
 .post-com-count {
-  background-image: url(../images/bubble_bg.gif);
+  background-image: url("http://www.wapp.dev/wp-admin/images/bubble_bg.gif");
   color: #fff;
 }
 .post-com-count span {
@@ -341,13 +334,13 @@ input[type=submit]:hover {
 .button,
 .submit input,
 .button-secondary {
-  background: #f2f2f2 url(../images/white-grad.png) repeat-x scroll left top;
+  background: #f2f2f2 url("http://www.wapp.dev/wp-admin/images/white-grad.png") repeat-x scroll left top;
   text-shadow: #ffffff 0 1px 0;
 }
 .button:active,
 .submit input:active,
 .button-secondary:active {
-  background: #eeeeee url(../images/white-grad-active.png) repeat-x scroll left top;
+  background: #eeeeee url("http://www.wapp.dev/wp-admin/images/white-grad-active.png") repeat-x scroll left top;
 }
 input.button-primary,
 button.button-primary,
@@ -355,13 +348,13 @@ a.button-primary {
   border-color: #298cba;
   font-weight: bold;
   color: #fff;
-  background: #21759b url(../images/button-grad.png) repeat-x scroll left top;
+  background: #21759b url("http://www.wapp.dev/wp-admin/images/button-grad.png") repeat-x scroll left top;
   text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
 }
 input.button-primary:active,
 button.button-primary:active,
 a.button-primary:active {
-  background: #21759b url(../images/button-grad-active.png) repeat-x scroll left top;
+  background: #21759b url("http://www.wapp.dev/wp-admin/images/button-grad-active.png") repeat-x scroll left top;
   color: #eaf2fa;
 }
 input.button-primary:hover,
@@ -472,7 +465,7 @@ a.page-numbers {
 .widefat td,
 .widefat th {
   border-top-color: #fff;
-  border-bottom-color: #D0DFE9;
+  border-bottom-color: #dfdfdf;
 }
 .widefat th {
   text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
@@ -550,27 +543,6 @@ input.readonly,
 textarea.readonly {
   background-color: #ddd;
 }
-.quicktags-toolbar input {
-  background: #fff;
-  background-image: -ms-linear-gradient(bottom, #e5f0f8, #ffffff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #e5f0f8, #ffffff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #e5f0f8, #ffffff);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#e5f0f8), to(#ffffff));
-  /* old Webkit	 */
-
-  background-image: -webkit-linear-gradient(bottom, #e5f0f8, #ffffff) !important;
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #e5f0f8, #ffffff);
-  /* proposed W3C Markup */
-
-}
 #editable-post-name {
   background-color: #fffbcc;
 }
@@ -590,11 +562,11 @@ textarea.readonly {
 }
 #footer {
   color: #777;
-  border-color: #b0c8d7;
+  border-color: #dfdfdf;
 }
+.imgedit-group,
 #media-items .media-item,
-.media-item .describe,
-.imgedit-group {
+.media-item .describe {
   border-color: #dfdfdf;
 }
 .checkbox,
@@ -643,7 +615,7 @@ table.widefat span.spam a,
   color: #bc0b0b;
 }
 .welcome-panel {
-  border-color: #d1e5ee;
+  border-color: #dfdfdf;
 }
 .welcome-panel p {
   color: #777;
@@ -660,7 +632,7 @@ table.widefat span.spam a,
 #titlediv,
 #poststuff .postarea,
 .stuffbox {
-  border-color: #d1e5ee;
+  border-color: #dfdfdf;
   -moz-box-shadow: inset 0 1px 0 #fff;
   -webkit-box-shadow: inset 0 1px 0 #fff;
   box-shadow: inset 0 1px 0 #fff;
@@ -671,20 +643,40 @@ table.widefat span.spam a,
 #widget-list .widget-top,
 .postbox,
 .menu-item-settings {
-  background-color: #f7fcfe;
+  background-color: #f5f5f5;
+  /* Fallback */
+
+  background-image: -ms-linear-gradient(top, #f9f9f9, #f5f5f5);
+  /* IE10 */
+
+  background-image: -moz-linear-gradient(top, #f9f9f9, #f5f5f5);
+  /* Firefox */
+
+  background-image: -o-linear-gradient(top, #f9f9f9, #f5f5f5);
+  /* Opera */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f5f5f5));
+  /* old Webkit */
+
+  background-image: -webkit-linear-gradient(top, #f9f9f9, #f5f5f5);
+  /* new Webkit */
+
+  background-image: linear-gradient(top, #f9f9f9, #f5f5f5);
+  /* proposed W3C Markup */
+
 }
 .postbox h3 {
-  color: #174f69;
+  color: #464646;
 }
 .widget .widget-top {
-  color: #174f69;
+  color: #222;
 }
 .sidebar-name:hover h3,
 .postbox h3:hover {
   color: #000;
 }
 .curtime #timestamp {
-  background-image: url(../images/date-button.gif);
+  background-image: url("http://www.wapp.dev/wp-admin/images/date-button.gif");
 }
 #quicktags #ed_link {
   color: #00f;
@@ -697,33 +689,95 @@ table.widefat span.spam a,
 }
 .tagchecklist span a,
 #bulk-titles div a {
-  background: url(../images/xit.gif) no-repeat;
+  background: url("http://www.wapp.dev/wp-admin/images/xit.gif") no-repeat;
 }
 .tagchecklist span a:hover,
 #bulk-titles div a:hover {
-  background: url(../images/xit.gif) no-repeat -10px 0;
+  background: url("http://www.wapp.dev/wp-admin/images/xit.gif") no-repeat -10px 0;
 }
 #update-nag,
 .update-nag {
-  background-color: #fffbcc;
-  border-color: #e6db55;
+  background-color: #FFFBCC;
+  border-color: #E6DB55;
   color: #555;
 }
+#screen-meta {
+  background-color: #f1f1f1;
+  border-color: #ccc;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+#contextual-help-back {
+  background: #fff;
+}
+.contextual-help-tabs a:hover {
+  color: #333;
+}
+#contextual-help-back,
+.contextual-help-tabs .active {
+  border-color: #ccc;
+}
+.contextual-help-tabs .active,
+.contextual-help-tabs .active a,
+.contextual-help-tabs .active a:hover {
+  background: #fff;
+  color: #333;
+}
+/* screen options and help tabs */
+#screen-options-link-wrap,
+#contextual-help-link-wrap {
+  background-color: #e3e3e3;
+  /* Fallback */
+
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-image: -ms-linear-gradient(bottom, #dfdfdf, #f1f1f1);
+  /* IE10 */
+
+  background-image: -moz-linear-gradient(bottom, #dfdfdf, #f1f1f1);
+  /* Firefox */
+
+  background-image: -o-linear-gradient(bottom, #dfdfdf, #f1f1f1);
+  /* Opera */
+
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#dfdfdf), to(#f1f1f1));
+  /* old Webkit */
+
+  background-image: -webkit-linear-gradient(bottom, #dfdfdf, #f1f1f1);
+  /* new Webkit */
+
+  background-image: linear-gradient(bottom, #dfdfdf, #f1f1f1);
+  /* proposed W3C Markup */
+
+}
+#screen-meta-links a.show-settings {
+  color: #777;
+}
+#screen-meta-links a.show-settings:hover {
+  color: #333;
+}
+#screen-meta-links a.show-settings {
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows.png") no-repeat right 4px;
+}
+#screen-meta-links a.show-settings.screen-meta-active {
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows.png") no-repeat right -31px;
+}
+/* end screen options and help tabs */
 .login #backtoblog a {
   color: #464646;
 }
 #wphead {
-  border-bottom: #d0dfe9 1px solid;
+  border-bottom: #dfdfdf 1px solid;
 }
 #wphead h1 a {
-  color: #174f69;
+  color: #464646;
 }
 #footer a:link,
 #footer a:visited {
   text-decoration: none;
 }
 #footer a:hover {
-  color: #000;
   text-decoration: underline;
 }
 .file-error,
@@ -756,469 +810,15 @@ table.widefat .spam a:hover,
   background-color: #c3ff88;
   border-color: #8dff1c !important;
 }
-/* editors */
-#quicktags {
-  border-color: #cfdfe9;
-  background-color: #cfdfe9;
-  background-image: url("../images/ed-bg-vs.gif?ver=20101102");
-}
-.quicktags-toolbar input {
-  border-color: #b2c4c8;
-}
-.quicktags-toolbar input:hover {
-  border-color: #d0dfe9;
-  background: #f0f8fe;
-}
-#poststuff .wp-editor-wrap .wp_themeSkin .mceStatusbar {
-  border-color: #d0dfe9;
-}
-#poststuff .wp-editor-wrap .wp_themeSkin .mceStatusbar * {
-  color: #555;
-}
-#poststuff #editor-toolbar .active {
-  border-color: #d0dfe9 #d0dfe9 #eff8ff;
-  background-color: #eff8ff;
-  color: #333;
-}
-/* TinyMCE */
-#post-status-info {
-  background-color: #eff8ff;
-}
-.wp-editor-wrap .wp_themeSkin *,
-.wp-editor-wrap .wp_themeSkin a:hover,
-.wp-editor-wrap .wp_themeSkin a:link,
-.wp-editor-wrap .wp_themeSkin a:visited,
-.wp-editor-wrap .wp_themeSkin a:active {
-  color: #000;
-}
-/* Containers */
-.wp-editor-wrap .wp_themeSkin table.mceLayout {
-  border-color: #bed1dd #bed1dd #d0dfe9;
-}
-#editorcontainer #content,
-#editorcontainer .wp-editor-wrap .wp_themeSkin .mceIframeContainer {
-  -moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-.wp-editor-wrap .wp_themeSkin iframe {
-  background: transparent;
-}
-/* Layout */
-.wp-editor-wrap .wp_themeSkin .mceStatusbar {
-  color: #000;
-  background-color: #f5f5f5;
-}
-/* Button */
-.wp-editor-wrap .wp_themeSkin .mceButton {
-  border-color: #B0C8D7;
-  background-color: #cfdfe9;
-  /* Fallback */
-
-  background-image: -ms-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#cfdfe9), to(#ffffff));
-  /* old Webkit	*/
-
-  background-image: -webkit-linear-gradient(bottom, #cfdfe9, #ffffff) !important;
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* proposed W3C Markup */
-
-}
-.wp-editor-wrap .wp_themeSkin a.mceButtonEnabled:hover {
-  border-color: #5589AA !important;
-  background-color: #c9c9c9;
-  /* Fallback */
-
-  background-image: -ms-linear-gradient(bottom, #bdccd5, #ffffff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #bdccd5, #ffffff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #bdccd5, #ffffff);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#bdccd5), to(#ffffff));
-  /* old Webkit	 */
-
-  background-image: -webkit-linear-gradient(bottom, #bdccd5, #ffffff) !important;
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #bdccd5, #ffffff);
-  /* proposed W3C Markup */
-
-}
-.wp-editor-wrap .wp_themeSkin a.mceButton:active,
-.wp-editor-wrap .wp_themeSkin a.mceButtonEnabled:active,
-.wp-editor-wrap .wp_themeSkin a.mceButtonSelected:active,
-.wp-editor-wrap .wp_themeSkin a.mceButtonActive,
-.wp-editor-wrap .wp_themeSkin a.mceButtonActive:active,
-.wp-editor-wrap .wp_themeSkin a.mceButtonActive:hover {
-  background: #B0C8D7 !important;
-  background-image: -ms-linear-gradient(bottom, #ffffff, #cfdfe9);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #ffffff, #cfdfe9);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #ffffff, #cfdfe9);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#cfdfe9));
-  /* old Webkit	 */
-
-  background-image: -webkit-linear-gradient(bottom, #ffffff, #cfdfe9) !important;
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #ffffff, #cfdfe9);
-  /* proposed W3C Markup */
-
-  border-color: #5589AA !important;
-}
-.wp-editor-wrap .wp_themeSkin .mceButtonDisabled {
-  border-color: #B0C8D7 !important;
-}
-/* ListBox */
-.wp-editor-wrap .wp_themeSkin .mceListBox .mceText,
-.wp-editor-wrap .wp_themeSkin .mceListBox .mceOpen {
-  border-color: #B0C8D7;
-  background-color: #cfdfe9;
-  /* Fallback */
-
-  background-image: -ms-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#cfdfe9), to(#ffffff));
-  /* old Webkit	*/
-
-  background-image: -webkit-linear-gradient(bottom, #cfdfe9, #ffffff) !important;
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* proposed W3C Markup */
-
-}
-.wp-editor-wrap .wp_themeSkin .mceListBox .mceOpen {
-  border-left: 0px !important;
-}
-.wp-editor-wrap .wp_themeSkin table.mceListBoxEnabled:hover .mceOpen,
-.wp-editor-wrap .wp_themeSkin .mceListBoxHover .mceOpen,
-.wp-editor-wrap .wp_themeSkin .mceListBoxHover:active .mceOpen,
-.wp-editor-wrap .wp_themeSkin .mceListBoxSelected .mceOpen,
-.wp-editor-wrap .wp_themeSkin .mceListBoxSelected .mceText,
-.wp-editor-wrap .wp_themeSkin table.mceListBoxEnabled:active .mceText {
-  background: #B0C8D7;
-  border-color: #5589AA !important;
-}
-/* List Box Hover */
-.wp-editor-wrap .wp_themeSkin table.mceListBoxEnabled:hover .mceText,
-.wp-editor-wrap .wp_themeSkin .mceListBoxHover .mceText,
-.wp-editor-wrap .wp_themeSkin table.mceListBoxEnabled:hover .mceOpen,
-.wp-editor-wrap .wp_themeSkin .mceListBoxHover .mceOpen {
-  border-color: #5589AA !important;
-  background-color: #c9c9c9;
-  /* Fallback */
-
-  background-image: -ms-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#cfdfe9), to(#ffffff));
-  /* old Webkit	*/
-
-  background-image: -webkit-linear-gradient(bottom, #cfdfe9, #ffffff) !important;
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* proposed W3C Markup */
-
-}
-.wp-editor-wrap .wp_themeSkin select.mceListBox {
-  border-color: #B2B2B2;
-  background-color: #fff;
-}
-/* SplitButton */
-.wp-editor-wrap .wp_themeSkin .mceSplitButton a.mceAction,
-.wp-editor-wrap .wp_themeSkin .mceSplitButton a.mceOpen {
-  border-color: #B0C8D7;
-}
-.wp-editor-wrap .wp_themeSkin .mceSplitButton a.mceOpen:hover,
-.wp-editor-wrap .wp_themeSkin .mceSplitButtonSelected a.mceOpen,
-.wp-editor-wrap .wp_themeSkin table.mceSplitButtonEnabled:hover a.mceAction,
-.wp-editor-wrap .wp_themeSkin .mceSplitButton a.mceAction:hover {
-  border-color: #5589AA !important;
-}
-.wp-editor-wrap .wp_themeSkin table.mceSplitButton td {
-  background-color: #cfdfe9;
-  /* Fallback */
-
-  background-image: -ms-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#cfdfe9), to(#ffffff));
-  /* old Webkit	*/
-
-  background-image: -webkit-linear-gradient(bottom, #cfdfe9, #ffffff) !important;
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* proposed W3C Markup */
-
-}
-.wp-editor-wrap .wp_themeSkin table.mceSplitButton:hover td {
-  background-image: -ms-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#cfdfe9), to(#ffffff));
-  /* old Webkit	*/
-
-  background-image: -webkit-linear-gradient(bottom, #cfdfe9, #ffffff) !important;
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* proposed W3C Markup */
-
-}
-.wp-editor-wrap .wp_themeSkin .mceSplitButtonActive {
-  background-color: #B0C8D7;
-}
-/* ColorSplitButton */
-.wp-editor-wrap .wp_themeSkin div.mceColorSplitMenu table {
-  background-color: #ebebeb;
-  border-color: #B2B2B2;
-}
-.wp-editor-wrap .wp_themeSkin .mceColorSplitMenu a {
-  border-color: #B2B2B2;
-}
-.wp-editor-wrap .wp_themeSkin .mceColorSplitMenu a.mceMoreColors {
-  border-color: #fff;
-}
-.wp-editor-wrap .wp_themeSkin .mceColorSplitMenu a.mceMoreColors:hover {
-  border-color: #0A246A;
-  background-color: #B6BDD2;
-}
-.wp-editor-wrap .wp_themeSkin a.mceMoreColors:hover {
-  border-color: #0A246A;
-}
-/* Menu */
-.wp-editor-wrap .wp_themeSkin .mceMenu {
-  border-color: #ddd;
-}
-.wp-editor-wrap .wp_themeSkin .mceMenu table {
-  background-color: #ebeaeb;
-}
-.wp-editor-wrap .wp_themeSkin .mceMenu .mceText {
-  color: #000;
-}
-.wp-editor-wrap .wp_themeSkin .mceMenu .mceMenuItemEnabled a:hover,
-.wp-editor-wrap .wp_themeSkin .mceMenu .mceMenuItemActive {
-  background-color: #f5f5f5;
-}
-.wp-editor-wrap .wp_themeSkin td.mceMenuItemSeparator {
-  background-color: #aaa;
-}
-.wp-editor-wrap .wp_themeSkin .mceMenuItemTitle a {
-  background-color: #ccc;
-  border-bottom-color: #aaa;
-}
-.wp-editor-wrap .wp_themeSkin .mceMenuItemTitle span.mceText {
-  color: #000;
-}
-.wp-editor-wrap .wp_themeSkin .mceMenuItemDisabled .mceText {
-  color: #888;
-}
-.wp-editor-wrap .wp_themeSkin tr.mceFirst td.mceToolbar {
-  background: #cfdfe9 url("../images/ed-bg-vs.gif?ver=20101102") repeat-x scroll left top;
-  border-color: #cfdfe9;
-}
-.wp-admin #mceModalBlocker {
-  background: #000;
-}
-.wp-admin .clearlooks2 .mceFocus .mceTop .mceLeft {
-  background: #444444;
-  border-left: 1px solid #999;
-  border-top: 1px solid #999;
-  -webkit-border-top-left-radius: 3px;
-  border-top-left-radius: 3px;
-}
-.wp-admin .clearlooks2 .mceFocus .mceTop .mceRight {
-  background: #444444;
-  border-right: 1px solid #999;
-  border-top: 1px solid #999;
-  -webkit-border-top-right-radius: 3px;
-  border-top-right-radius: 3px;
-}
-.wp-admin .clearlooks2 .mceMiddle .mceLeft {
-  background: #f1f1f1;
-  border-left: 1px solid #999;
-}
-.wp-admin .clearlooks2 .mceMiddle .mceRight {
-  background: #f1f1f1;
-  border-right: 1px solid #999;
-}
-.wp-admin .clearlooks2 .mceBottom {
-  background: #f1f1f1;
-  border-bottom: 1px solid #999;
-}
-.wp-admin .clearlooks2 .mceBottom .mceLeft {
-  background: #f1f1f1;
-  border-bottom: 1px solid #999;
-  border-left: 1px solid #999;
-}
-.wp-admin .clearlooks2 .mceBottom .mceCenter {
-  background: #f1f1f1;
-  border-bottom: 1px solid #999;
-}
-.wp-admin .clearlooks2 .mceBottom .mceRight {
-  background: #f1f1f1;
-  border-bottom: 1px solid #999;
-  border-right: 1px solid #999;
-}
-.wp-admin .clearlooks2 .mceFocus .mceTop span {
-  color: #e5e5e5;
-}
-.wp-editor-wrap .wp-switch-editor {
-  background-color: #f5fafd;
-  border-color: #d1e5ee #d1e5ee #d1e5ee;
-  color: #999999;
-}
-.wp-editor-wrap.tmce-active .switch-tmce,
-.wp-editor-wrap.html-active .switch-html {
-  background-color: #eff8ff;
-  border-color: #d1e5ee #d1e5ee #eff8ff;
-  color: #333;
-}
-.wp-editor-wrap.quicktags-toolbar input {
-  color: #464646;
-  border-color: #d1e5ee;
-  background-color: #eff8ff;
-  background-image: -ms-linear-gradient(bottom, #eff8ff, #ffffff);
-  background-image: -moz-linear-gradient(bottom, #eff8ff, #ffffff);
-  background-image: -o-linear-gradient(bottom, #eff8ff, #ffffff);
-  background-image: -webkit-linear-gradient(bottom, #eff8ff, #ffffff);
-  background-image: linear-gradient(bottom, #eff8ff, #ffffff);
-}
-.wp-editor-wrap .quicktags-toolbar,
-.wp-editor-wrap.wp_themeSkin tr.mceFirst td.mceToolbar {
-  border-bottom: 1px solid #ccc;
-  background-color: #eff8ff;
-  /* Fallback */
-
-  background-image: -ms-linear-gradient(bottom, #cfdfe9, #eff8ff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #cfdfe9, #eff8ff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #cfdfe9, #eff8ff);
-  /* Opera */
-
-  background-image: -webkit-linear-gradient(bottom, #cfdfe9, #eff8ff);
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #cfdfe9, #eff8ff);
-  /* proposed W3C Markup */
-
-}
-.wp-editor-wrap .quicktags-toolbar input:hover {
-  border-color: #aaa;
-  background: #ddd;
-}
-.wp-editor-wrap.wp_themeSkin .mceButton,
-.wp-editor-wrap.wp_themeSkin .mceListBox .mceText,
-.wp-editor-wrap.wp_themeSkin .mceListBox .mceOpen {
-  border-color: #ccc;
-  background-color: #eff8ff;
-  /* Fallback */
-
-  background-image: -ms-linear-gradient(bottom, #eff8ff, #ffffff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #eff8ff, #ffffff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #eff8ff, #ffffff);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#eff8ff), to(#ffffff));
-  /* old Webkit */
-
-  background-image: -webkit-linear-gradient(bottom, #eff8ff, #ffffff);
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #eff8ff, #ffffff);
-  /* proposed W3C Markup */
-
-}
-.wp-editor-wrap.wp_themeSkin a.mceButtonEnabled:hover {
-  border-color: #a0a0a0;
-  background: #ddd;
-  /* Fallback */
-
-  background-image: -ms-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#cfdfe9), to(#ffffff));
-  /* old Webkit */
-
-  background-image: -webkit-linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #cfdfe9, #ffffff);
-  /* proposed W3C Markup */
-
-}
-/* end TinyMCE */
 #titlediv #title {
-  border-color: #bdccd5;
-}
-#editorcontainer {
-  border-color: #bdccd5 #bdccd5 #d0dfe9;
+  border-color: #ccc;
 }
 #post-status-info {
-  border-color: #d0dfe9 #bdccd5 #bdccd5;
+  border-color: #dfdfdf #ccc #ccc;
+  background-color: #eaeaea;
 }
 .editwidget .widget-inside {
-  border-color: #d0dfe9;
+  border-color: #dfdfdf;
 }
 #titlediv #title {
   background-color: #fff;
@@ -1239,29 +839,27 @@ table.widefat .spam a:hover,
   border-color: #d5d5d5;
 }
 #adminmenu li.wp-menu-separator {
-  background: #D1E5EE;
-  border-color: #bed1dd;
+  background: #dfdfdf;
+  border-color: #cfcfcf;
 }
 #adminmenu div.separator {
-  border-color: #D1E5EE;
+  border-color: #e1e1e1;
 }
 #adminmenu li.wp-has-current-submenu.wp-menu-open .wp-menu-toggle,
 #adminmenu li.wp-has-current-submenu:hover .wp-menu-toggle {
-  background: transparent url(../images/arrows-dark-vs.png) no-repeat -1px 6px;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows-dark.png") no-repeat -1px 6px;
 }
 #adminmenu .wp-has-submenu:hover .wp-menu-toggle,
 #adminmenu .wp-menu-open .wp-menu-toggle {
-  background: transparent url(../images/arrows-vs.png) no-repeat -2px 6px;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows.png") no-repeat -2px 6px;
 }
 #adminmenu li.menu-top:hover > a,
 #adminmenu li.menu-top.focused > a,
 #adminmenu li.menu-top > a:focus {
-  background-color: #e0f1ff;
+  background-color: #e4e4e4;
 }
 #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
 #adminmenu li.current a.menu-top,
-.folded #adminmenu li.wp-has-current-submenu,
-.folded #adminmenu li.current.menu-top,
 #adminmenu .wp-menu-arrow,
 #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head {
   background-color: transparent;
@@ -1269,18 +867,9 @@ table.widefat .spam a:hover,
 
 }
 #adminmenu .wp-menu-arrow div {
-  background-color: #5589AA;
+  background-color: transparent;
   /* Fallback */
 
-}
-#adminmenu li.wp-not-current-submenu .wp-menu-arrow {
-  border-top-color: #fff;
-  border-bottom-color: #cae6ff;
-  background: #e0f1ff;
-}
-#adminmenu li.wp-not-current-submenu .wp-menu-arrow div {
-  background: #e0f1ff;
-  border-color: #cae6ff;
 }
 #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
 #adminmenu li.current a.menu-top,
@@ -1289,7 +878,6 @@ table.widefat .spam a:hover,
 }
 #adminmenu .wp-submenu a:hover,
 #adminmenu .wp-submenu a:focus {
-  background-color: #EFF8FF;
   color: #333;
 }
 #adminmenu .wp-submenu li.current,
@@ -1300,10 +888,6 @@ table.widefat .spam a:hover,
 #adminmenu .wp-submenu ul {
   background-color: transparent;
 }
-#adminmenu .wp-submenu .wp-submenu-head {
-  border-right-color: #e8eff4;
-  background-color: #EFF8FF;
-}
 #adminmenu div.wp-submenu {
   background-color: transparent;
 }
@@ -1311,7 +895,7 @@ table.widefat .spam a:hover,
 @media only screen and (max-width: 900px) {
   #adminmenu li.wp-has-current-submenu,
   #adminmenu li.current.menu-top {
-    background-color: #5589AA;
+    background-color: #777;
     /* Fallback */
   
   }
@@ -1338,7 +922,7 @@ div.wp-menu-image {
 .icon16.icon-tools,
 .icon16.icon-settings,
 .icon16.icon-site {
-  background-image: url(../images/menu.png?ver=20120201);
+  background-image: url("http://www.wapp.dev/wp-admin/images/menu.png?ver=20120201");
 }
 .icon16.icon-dashboard {
   background-position: -59px -33px;
@@ -1409,7 +993,7 @@ div.wp-menu-image {
 #icon-options-general,
 .icon32.icon-site,
 #icon-ms-admin {
-  background-image: url(../images/icons32-vs.png?ver=20111206);
+  background-image: url("http://www.wapp.dev/wp-admin/images/icons32.png?ver=20111206");
 }
 .icon32.icon-post,
 #icon-edit,
@@ -1498,7 +1082,7 @@ div.wp-menu-image {
   #icon-options-general,
   .icon32.icon-site,
   #icon-ms-admin {
-    background-image: url(../images/icons32-vs-2x.png?ver=20120412);
+    background-image: url("http://www.wapp.dev/wp-admin/images/icons32-2x.png?ver=20120412");
     background-size: 708px 45px;
   }
   .icon16.icon-dashboard,
@@ -1525,7 +1109,7 @@ div.wp-menu-image {
   .menu-icon-settings div.wp-menu-image,
   .icon16.icon-site,
   .menu-icon-site div.wp-menu-image {
-    background-image: url('../images/menu-2x.png?ver=20120412');
+    background-image: url("http://www.wapp.dev/wp-admin/images/menu-2x.png?ver=20120412");
     background-size: 390px 64px;
   }
 }
@@ -1557,70 +1141,6 @@ table.diff .diff-addedline ins {
   border-color: #dfdfdf #dfdfdf #fff;
   color: #D54E21;
 }
-#screen-meta {
-  background-color: #EFF8FF;
-  border-color: #D1E5EE;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-#contextual-help-back {
-  background: #fff;
-}
-.contextual-help-tabs a:hover {
-  background-color: #ceeaff;
-  color: #333;
-}
-#contextual-help-back,
-.contextual-help-tabs .active {
-  border-color: #D1E5EE;
-}
-.contextual-help-tabs .active,
-.contextual-help-tabs .active a,
-.contextual-help-tabs .active a:hover {
-  background: #fff;
-  color: #000;
-}
-/* screen options and help tabs */
-#screen-options-link-wrap,
-#contextual-help-link-wrap {
-  background-color: #eff8ff;
-  /* Fallback */
-
-  border-right: 1px solid #D1E5EE;
-  border-left: 1px solid #D1E5EE;
-  border-bottom: 1px solid #D1E5EE;
-  background-image: -ms-linear-gradient(bottom, #eff8ff, #eff8ff);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(bottom, #def1ff, #eff8ff);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(bottom, #def1ff, #eff8ff);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#def1ff), to(#eff8ff));
-  /* old Webkit */
-
-  background-image: -webkit-linear-gradient(bottom, #def1ff, #eff8ff);
-  /* new Webkit */
-
-  background-image: linear-gradient(bottom, #def1ff, #eff8ff);
-  /* proposed W3C Markup */
-
-}
-#screen-meta-links a.show-settings {
-  color: #606060;
-}
-#screen-meta-links a.show-settings:hover {
-  color: #000;
-}
-#screen-meta-links a.show-settings {
-  background: transparent url(../images/arrows-vs.png) no-repeat right 4px;
-}
-#screen-meta-links a.show-settings.screen-meta-active {
-  background: transparent url(../images/arrows-vs.png) no-repeat right -31px;
-}
-/* end screen options and help tabs */
 #replyerror {
   border-color: #ddd;
   background-color: #f9f9f9;
@@ -1672,14 +1192,14 @@ fieldset.inline-edit-col-right .inline-edit-col {
   color: #D54E21;
 }
 .meta-box-sortables .postbox:hover .handlediv {
-  background: transparent url(../images/arrows-vs.png) no-repeat 6px 7px;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows.png") no-repeat 6px 7px;
 }
 .tablenav .tablenav-pages {
   color: #555;
 }
 .tablenav .tablenav-pages a {
-  border-color: #d1e5ee;
-  background: #eeeeee url('../images/menu-bits-vs.gif?ver=20101102') repeat-x scroll left -379px;
+  border-color: #e3e3e3;
+  background: #eeeeee url("http://www.wapp.dev/wp-admin/images/menu-bits.gif?ver=20100610") repeat-x scroll left -379px;
 }
 .tablenav .tablenav-pages a:hover,
 .tablenav .tablenav-pages a:focus {
@@ -1711,10 +1231,10 @@ fieldset.inline-edit-col-right .inline-edit-col {
 }
 .misc-pub-section {
   border-top-color: #fff;
-  border-bottom-color: #eee;
+  border-bottom-color: #dfdfdf;
 }
 #minor-publishing {
-  border-bottom-color: #ddd;
+  border-bottom-color: #dfdfdf;
 }
 #post-body .misc-pub-section {
   border-left-color: #eee;
@@ -1735,19 +1255,19 @@ body.press-this ul.category-tabs li.tabs a {
   color: #333;
 }
 .view-switch #view-switch-list {
-  background: transparent url(../images/list.png) no-repeat 0 0;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/list.png") no-repeat 0 0;
 }
 .view-switch .current #view-switch-list {
-  background: transparent url(../images/list.png) no-repeat -40px 0;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/list.png") no-repeat -40px 0;
 }
 .view-switch #view-switch-excerpt {
-  background: transparent url(../images/list.png) no-repeat -20px 0;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/list.png") no-repeat -20px 0;
 }
 .view-switch .current #view-switch-excerpt {
-  background: transparent url(../images/list.png) no-repeat -60px 0;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/list.png") no-repeat -60px 0;
 }
 #header-logo {
-  background: transparent url(../images/wp-logo-vs.png?ver=20101102) no-repeat scroll center center;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/wp-logo.png?ver=20110504") no-repeat scroll center center;
 }
 .popular-tags,
 .feature-filter {
@@ -1755,42 +1275,18 @@ body.press-this ul.category-tabs li.tabs a {
   border-color: #DFDFDF;
 }
 div.widgets-sortables,
-#widgets-left .inactive {
-  background-color: #f7fcfe;
-  border-color: #d0dfe9;
-}
+#widgets-left .inactive,
 #available-widgets .widget-holder {
-  background-color: #f7fcfe;
-  border-color: #d0dfe9;
+  background-color: #fcfcfc;
+  border-color: #dfdfdf;
 }
 #available-widgets .widget-description {
   color: #555;
 }
 .sidebar-name {
   color: #464646;
-  background-color: #f7fcfe;
-  /* Fallback */
-
-  background-image: -ms-linear-gradient(top, #ecf8fe, #f7fcfe);
-  /* IE10 */
-
-  background-image: -moz-linear-gradient(top, #ecf8fe, #f7fcfe);
-  /* Firefox */
-
-  background-image: -o-linear-gradient(top, #ecf8fe, #f7fcfe);
-  /* Opera */
-
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ecf8fe), to(#f7fcfe));
-  /* old Webkit */
-
-  background-image: -webkit-linear-gradient(top, #ecf8fe, #f7fcfe);
-  /* new Webkit */
-
-  background-image: linear-gradient(top, #ecf8fe, #f7fcfe);
-  /* proposed W3C Markup */
-
   text-shadow: #fff 0 1px 0;
-  border-color: #d0dfe9;
+  border-color: #dfdfdf;
   -moz-box-shadow: inset 0 1px 0 #fff;
   -webkit-box-shadow: inset 0 1px 0 #fff;
   box-shadow: inset 0 1px 0 #fff;
@@ -1803,10 +1299,10 @@ div.widgets-sortables,
   color: black;
 }
 .sidebar-name-arrow {
-  background: transparent url(../images/arrows-vs.png) no-repeat 5px 9px;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows.png") no-repeat 5px 9px;
 }
 .sidebar-name:hover .sidebar-name-arrow {
-  background: transparent url(../images/arrows-dark-vs.png) no-repeat 5px 9px;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows-dark.png") no-repeat 5px 9px;
 }
 .in-widget-title {
   color: #606060;
@@ -1840,15 +1336,15 @@ div.widgets-sortables,
 }
 /* added from nav-menu.css */
 #menu-management .menu-edit {
-  border-color: #d0dfe9;
+  border-color: #dfdfdf;
 }
 #post-body {
-  background: #ffffff;
+  background: #fff;
   border-top-color: #fff;
-  border-bottom-color: #d0dfe9;
+  border-bottom-color: #dfdfdf;
 }
 #nav-menu-header {
-  border-bottom-color: #d0dfe9;
+  border-bottom-color: #dfdfdf;
 }
 #nav-menu-footer {
   border-top-color: #fff;
@@ -1866,8 +1362,8 @@ div.widgets-sortables,
   border-color: #dfdfdf;
 }
 #menu-management .nav-tab {
-  background: #f7fcfe;
-  border-color: #d0dfe9;
+  background: #fbfbfb;
+  border-color: #dfdfdf;
 }
 .js .input-with-default-title {
   color: #aaa;
@@ -1879,11 +1375,9 @@ div.widgets-sortables,
   background-color: #FF0000;
   color: #fff;
 }
-.list-container {
-  border-color: #dfdfdf;
-}
+.list-container,
 .menu-item-handle {
-  border-color: #d0dfe9;
+  border-color: #dfdfdf;
 }
 .menu li.deleting .menu-item-handle {
   background-color: #f66;
@@ -1898,20 +1392,20 @@ div.widgets-sortables,
   color: #ff0000;
 }
 .nav-menus-php .item-edit {
-  background: transparent url(../images/arrows-vs.png) no-repeat 8px 10px;
-  border-bottom-color: #eff8ff;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows.png") no-repeat 8px 10px;
+  border-bottom-color: #eee;
 }
 .item-edit:hover {
-  background: transparent url(../images/arrows-dark-vs.png) no-repeat 8px 10px;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows-dark.png") no-repeat 8px 10px;
 }
 .menu-item-settings {
   /* Menu editing */
 
-  border-color: #d0dfe9;
+  border-color: #dfdfdf;
 }
 .link-to-original {
   color: #777;
-  border-color: #d0dfe9;
+  border-color: #dfdfdf;
 }
 #cancel-save:hover {
   color: #fff !important;
@@ -1942,23 +1436,11 @@ div.widgets-sortables,
   box-shadow: inset 0 1px 0 #fff;
 }
 #menu-management .nav-tab-active {
-  background: #eff8ff;
-  border-bottom-color: #eff8ff;
+  background: #f9f9f9;
+  border-bottom-color: #f9f9f9;
 }
 #upload-form label {
   color: #777;
-}
-/* custom header & background pages */
-/* full screen */
-.fullscreen-overlay {
-  background: #fff;
-}
-.wp-fullscreen-focus #wp-fullscreen-title,
-.wp-fullscreen-focus #wp-fullscreen-container {
-  border-color: #BED1DD;
-}
-#fullscreen-topbar {
-  border-bottom-color: #D1E5EE;
 }
 /* Begin About Pages */
 .about-wrap h1 {
@@ -2000,6 +1482,9 @@ div.widgets-sortables,
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
+.about-wrap h4.wp-people-group {
+  text-shadow: 1px 1px 1px white;
+}
 .about-wrap .point-releases {
   border-bottom: 1px solid #dfdfdf;
 }
@@ -2008,9 +1493,6 @@ div.widgets-sortables,
 }
 .about-wrap .point-releases h3:first-child {
   border: 0;
-}
-.about-wrap h4.wp-people-group {
-  text-shadow: 1px 1px 1px white;
 }
 .about-wrap li.wp-person img.gravatar {
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
@@ -2036,7 +1518,7 @@ div.widgets-sortables,
   border-left-color: #99d;
 }
 .rtl .post-com-count {
-  background-image: url(../images/bubble_bg-rtl.gif);
+  background-image: url("http://www.wapp.dev/wp-admin/images/bubble_bg-rtl.gif");
 }
 .rtl #screen-meta-links a.show-settings {
   background-position: left 3px;
@@ -2047,15 +1529,11 @@ div.widgets-sortables,
 /* Menu */
 .rtl #adminmenu li.wp-has-current-submenu.wp-menu-open .wp-menu-toggle,
 .rtl #adminmenu li.wp-has-current-submenu:hover .wp-menu-toggle {
-  background: transparent url(../images/arrows-dark-vs.png) no-repeat 8px 6px;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows-dark.png") no-repeat 8px 6px;
 }
 .rtl #adminmenu .wp-has-submenu:hover .wp-menu-toggle,
 .rtl #adminmenu .wp-menu-open .wp-menu-toggle {
-  background: transparent url(../images/arrows-vs.png) no-repeat 8px 6px;
-}
-.rtl #adminmenu .wp-submenu .wp-submenu-head {
-  border-right-color: none;
-  border-left-color: #d1e5ee;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows.png") no-repeat 8px 6px;
 }
 .rtl #adminmenu .wp-submenu-wrap,
 .rtl.folded #adminmenu .wp-has-current-submenu .wp-submenu-wrap {
@@ -2081,21 +1559,21 @@ div.widgets-sortables,
     background-position: 0 -72px;
   }
 }
-/* edit image */
+/* Edit Image */
 .rtl .meta-box-sortables .postbox:hover .handlediv {
-  background: transparent url(../images/arrows-vs.png) no-repeat 6px 7px;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows.png") no-repeat 6px 7px;
 }
 .rtl .tablenav .tablenav-pages a {
-  border-color: #d1e5ee;
-  background: #eeeeee url('../images/menu-bits-rtl-vs.gif?ver=20100610') repeat-x scroll right -379px;
+  border-color: #e3e3e3;
+  background: #eeeeee url("http://www.wapp.dev/wp-admin/images/menu-bits-rtl.gif?ver=20100610") repeat-x scroll right -379px;
 }
 .rtl #post-body .misc-pub-section {
   border-right-color: none;
-  border-left-color: #d1e5ee;
+  border-left-color: #eee;
 }
 .rtl .sidebar-name-arrow {
-  background: transparent url(../images/arrows-vs.png) no-repeat 5px 9px;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows.png") no-repeat 5px 9px;
 }
 .rtl .sidebar-name:hover .sidebar-name-arrow {
-  background: transparent url(../images/arrows-dark-vs.png) no-repeat 5px 9px;
+  background: transparent url("http://www.wapp.dev/wp-admin/images/arrows-dark.png") no-repeat 5px 9px;
 }

@@ -10,11 +10,6 @@
 .wappack-admin #adminmenu {
   width: 64px;
 }
-.wappack-admin #adminmenu .wp-submenu,
-.wappack-admin #adminmenu .wp-submenu-wrap,
-.wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
-  width: 214px;
-}
 .wappack-admin #adminmenuback {
   background: #ededed;
   padding: 0;
@@ -25,7 +20,7 @@
   z-index: -1;
 }
 .wappack-admin #adminmenu {
-  clear: left;
+  float: left;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -49,28 +44,25 @@
   -moz-user-select: none;
   user-select: none;
 }
-.wappack-admin #adminmenu .wp-submenu {
+.wappack-admin #adminmenu .wp-submenu,
+.wappack-admin #adminmenu .wp-submenu-wrap,
+.wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
+  width: 194px;
+}
+.wappack-admin #adminmenu .wp-submenu,
+.wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
   list-style: none;
   padding: 0;
-  margin: 0;
-  overflow: hidden;
+  margin: 0 10px;
   display: none;
-}
-.wappack-admin #adminmenu li .wp-submenu,
-.wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
   position: absolute;
   top: 0;
-  left: 146px;
+  left: 65px;
   z-index: 999;
   overflow: hidden;
 }
 .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
   display: block;
-}
-.wappack-admin #adminmenu .wp-submenu,
-.wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
-  top: 0;
-  left: 65px;
 }
 .wappack-admin #adminmenu .wp-submenu.sub-open,
 .wappack-admin #adminmenu li.focused.wp-not-current-submenu .wp-submenu,
@@ -80,23 +72,16 @@
 .wappack-admin .no-js #adminmenu .wp-has-current-submenu:hover .wp-submenu {
   padding: 0 8px 8px 0;
 }
-.wappack-admin .no-js #adminmenu .wp-has-current-submenu:hover .wp-submenu,
-.wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
-  padding: 0;
-}
-.wappack-admin #adminmenu .wp-submenu a {
-  font-size: 14px;
-  line-height: 40px;
-}
-.wappack-admin #adminmenu a.menu-top,
 .wappack-admin #adminmenu .wp-submenu-head {
-  font-size: 13px;
-  line-height: 18px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+  font-size: 17.5px;
+  line-height: 24px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #d5d5d5;
+  -webkit-box-shadow: 0 1px 0 #f2f2f2;
+  -moz-box-shadow: 0 1px 0 #f2f2f2;
+  box-shadow: 0 1px 0 #f2f2f2;
 }
-.wappack-admin #adminmenu div.wp-submenu-head {
-  display: block;
-}
-.wappack-admin #adminmenu a.menu-top,
 .wappack-admin body.no-js #adminmenu .wp-menu-toggle,
 .wappack-admin #adminmenu div.wp-menu-toggle {
   display: none;
@@ -234,91 +219,74 @@
 }
 .wappack-admin #adminmenu a {
   display: block;
-  line-height: 24px;
-  padding: 2px 5px;
 }
 .wappack-admin #adminmenu a.menu-top {
-  font-weight: bold;
-  line-height: 18px;
-  min-width: 10em;
-  padding: 5px 5px;
-  border-width: 1px 0 1px;
-  border-style: solid;
-}
-.wappack-admin #adminmenu li li {
-  margin-left: 8px;
+  display: none;
 }
 .wappack-admin #adminmenu .wp-submenu a,
 .wappack-admin #adminmenu li li a,
 .wappack-admin #adminmenu .wp-not-current-submenu li a {
-  padding-left: 12px;
+  padding: 10px 10px;
+  font-size: 14px;
+  line-height: 20px;
 }
-.wappack-admin #adminmenu .wp-not-current-submenu li a {
-  padding-left: 18px;
-}
-.wappack-admin #adminmenu li li {
-  margin-left: 0;
-}
-.wappack-admin #adminmenu li li a {
-  padding-left: 0;
+.wappack-admin #adminmenu .wp-menu-arrow {
+  display: none;
 }
 .wappack-admin .wp-menu-arrow {
-  display: none;
   cursor: auto;
   z-index: 25;
   position: absolute;
-  right: 100%;
-  margin: 0;
-  height: 30px;
-  width: 6px;
-}
-.wappack-admin #adminmenu li.wp-has-current-submenu .wp-menu-arrow,
-.wappack-admin #adminmenu li.menu-top:hover .wp-menu-arrow,
-.wappack-admin #adminmenu li.current .wp-menu-arrow,
-.wappack-admin #adminmenu li.focused .wp-menu-arrow,
-.wappack-admin #adminmenu li.menu-top.wp-has-submenu:hover .wp-menu-arrow div {
-  display: block;
-}
-.wappack-admin #adminmenu li.wp-not-current-submenu:hover .wp-menu-arrow div {
-  display: none;
-}
-.wappack-admin #adminmenu li.menu-top:hover .wp-menu-arrow,
-.wappack-admin #adminmenu li.menu-top.focused .wp-menu-arrow {
-  z-index: 1001;
-}
-.wappack-admin .ie8 #adminmenu li.menu-top:hover .wp-menu-arrow {
-  display: none;
+  margin: 17px 0 0 0;
+  border-color: transparent #d5d5d5 transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  height: 0;
+  width: 0;
+  right: 0;
 }
 .wappack-admin #adminmenu .wp-menu-arrow div {
-  position: absolute;
-  top: 7px;
-  left: -1px;
-  width: 14px;
-  height: 15px;
-}
-.wappack-admin #adminmenu li.wp-not-current-submenu .wp-menu-arrow {
-  height: 28px;
-  border-width: 1px 0;
+  position: relative;
+  top: -10px;
+  width: 0;
+  height: 0;
+  right: 8px;
+  border-color: transparent #ededed transparent transparent;
   border-style: solid;
+  border-width: 10px 9px 10px 10px;
 }
-.wappack-admin #adminmenu .wp-not-current-submenu .wp-menu-arrow div {
-  width: 15px;
-  top: 6px;
-  border-width: 0 0 1px 1px;
-  border-style: solid;
-}
-.wappack-admin .wp-menu-arrow,
-.wappack-admin #adminmenu li.menu-top:hover .wp-menu-arrow {
-  display: none;
-}
-.wappack-admin #adminmenu li.current:hover .wp-menu-arrow,
-.wappack-admin #adminmenu li.menu-top.wp-menu-open:hover .wp-menu-arrow {
+.wappack-admin #adminmenu li.wp-has-current-submenu .wp-menu-arrow,
+.wappack-admin #adminmenu li.current .wp-menu-arrow {
   display: block;
-  z-index: 125;
 }
 .wappack-admin #adminmenu .wp-submenu li {
   padding: 0;
   margin: 0;
+  border-top: 1px dotted #d5d5d5;
+  -webkit-box-shadow: 0 -1px 0 transparent;
+  -moz-box-shadow: 0 -1px 0 transparent;
+  box-shadow: 0 -1px 0 transparent;
+}
+.wappack-admin #adminmenu .wp-submenu li.wp-first-item {
+  border-top: none;
+  border-bottom: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.wappack-admin #adminmenu li.menu-top {
+  min-height: 54px;
+  border-top: 1px solid #dcdcdc;
+  -webkit-box-shadow: 0 -1px 0 transparent;
+  -moz-box-shadow: 0 -1px 0 transparent;
+  box-shadow: 0 -1px 0 transparent;
+}
+.wappack-admin #adminmenu li.menu-top.wp-first-item {
+  border-top: none;
+  border-bottom: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 .wappack-admin #adminmenu .wp-menu-image img {
   float: left;
@@ -351,10 +319,6 @@
 .wappack-admin #adminmenu .wp-has-current-submenu.menu-top-last {
   margin-bottom: 0;
 }
-.wappack-admin #adminmenu .wp-submenu a {
-  padding-left: 10px;
-  margin: 0;
-}
 .wappack-admin #adminmenu .wp-menu-toggle {
   width: 18px;
   clear: right;
@@ -365,7 +329,8 @@
   cursor: pointer;
 }
 .wappack-admin #adminmenu .wp-menu-image a {
-  height: 24px;
+  height: 54px;
+  width: 44px;
 }
 .wappack-admin #adminmenu .awaiting-mod,
 .wappack-admin #adminmenu span.update-plugins,
@@ -399,7 +364,7 @@
   .wappack-admin #adminmenuwrap,
   .wappack-admin #adminmenu,
   .wappack-admin #adminmenu li.menu-top {
-    width: 32px;
+    width: 44px;
   }
   .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
     display: none;
@@ -420,7 +385,6 @@
   .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu.sub-open {
     padding: 0 8px 8px 0;
   }
-  .wappack-admin #adminmenu a.menu-top,
   .wappack-admin #adminmenu div.wp-menu-toggle {
     display: none;
   }
@@ -433,24 +397,9 @@
   .wappack-admin #adminmenu li li a {
     padding-left: 0;
   }
-  .wappack-admin .wp-menu-arrow {
-    -moz-transform: translate(33px);
-    -webkit-transform: translate(33px);
-    -o-transform: translate(33px);
-    -ms-transform: translate(33px);
-    transform: translate(33px);
-  }
-  .wappack-admin #adminmenu li.menu-top:hover .wp-menu-arrow {
-    display: none;
-  }
-  .wappack-admin #adminmenu li.current:hover .wp-menu-arrow,
-  .wappack-admin #adminmenu li.menu-top.wp-menu-open:hover .wp-menu-arrow {
-    display: block;
-    z-index: 125;
-  }
   .wappack-admin #adminmenu li.menu-top {
-    border-width: 1px 0;
-    border-style: solid none;
+    min-height: 54px;
+    position: relative;
   }
   .wappack-admin #adminmenu .wp-submenu .wp-submenu-wrap {
     margin-top: 3px;

@@ -3,8 +3,36 @@
 // --------------------------------------------------
 
 // Variables TODO be moved in to variables.less
+
+// Image Paths
+// -------------------------
 @iconMenuSpritePath:      "../images/adminmenu-icons.png";
 
+// Typography
+// -------------------------
+
+@sansFontFamily:        "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@baseFontSize:          14px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        20px;
+@altFontFamily:         @serifFontFamily;
+
+@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsColor:         inherit; // empty to use BS default, @textColor
+
+
+// Mixins TODO be moved in to mixins.less, some are duplicates in the original mixin file
+// --------------------------
+
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
 
 .icon-position-state ( @icon-pos: 1, @icon-base-height: 54px, @icon-base-width: 44px ) {
 
@@ -15,15 +43,30 @@
     @posy-hover: (( 2 * @icon-base-height ) - @icon-base-height ) * -1;
 
     div.wp-menu-image {
-        background-position:~`"@{posx}"` ~`"@{posy}"`;
-        &:hover { background-position:~`"@{posx}"` ~`"@{posy-hover}"`; }
+        background-position: @posx @posy;
+        &:hover { background-position: @posx @posy-hover; }
     }
 
     &.current div.wp-menu-image,
     &.wp-has-current-submenu div.wp-menu-image {
-        background-position:~`"@{posx}"` ~`"@{posy-hover}"`;
+        background-position: @posx @posy-hover;
     }
 
+}
+
+.admin-menu-item-divider ( @pos, @style: solid, @cola: #000, @colb: #fff ) when ( @pos = bottom ) {
+    border-bottom: 1px @style @cola;
+    .box-shadow ( 0 1px 0 @colb );
+}
+
+.admin-menu-item-divider ( @pos, @style: solid, @cola: #000, @colb: #fff ) when ( @pos = top ) {
+    border-top: 1px @style @cola;
+    .box-shadow ( 0 -1px 0 @colb );
+    &.wp-first-item {
+        border-top: none;
+        border-bottom: none;
+        .box-shadow ( none );
+    }
 }
 
 .wappack-admin {
@@ -36,11 +79,6 @@
         width: 64px;
     }
 
-    #adminmenu .wp-submenu,
-    #adminmenu .wp-submenu-wrap,
-    #adminmenu .wp-has-current-submenu .wp-submenu {
-        width: 214px;
-    }
 
     #adminmenuback {
         background: #ededed;
@@ -53,7 +91,7 @@
     }
 
     #adminmenu {
-        clear: left;
+        float: left;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -74,29 +112,31 @@
 
     #adminmenushadow {
         display: none;
-        // TODO could add arrow pointing to content area on the adminmenushadow div
+    // TODO could add arrow pointing to content area on the adminmenushadow div
     }
 
-    /* side admin menu */
+/* side admin menu */
     #adminmenu * {
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
     }
 
-    #adminmenu .wp-submenu {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-        display: none;
+    #adminmenu .wp-submenu,
+    #adminmenu .wp-submenu-wrap,
+    #adminmenu .wp-has-current-submenu .wp-submenu {
+        width: 194px;
     }
 
-    #adminmenu li .wp-submenu,
+    #adminmenu .wp-submenu,
     #adminmenu .wp-has-current-submenu .wp-submenu {
+        list-style: none;
+        padding: 0;
+        margin: 0 10px;
+        display: none;
         position: absolute;
         top: 0;
-        left: 146px;
+        left: 65px;
         z-index: 999;
         overflow: hidden;
     }
@@ -113,14 +153,6 @@
 //        display: none;
 //    }
 
-
-
-    #adminmenu .wp-submenu,
-    #adminmenu .wp-has-current-submenu .wp-submenu {
-        top: 0;
-        left: 65px;
-    }
-
     #adminmenu .wp-submenu.sub-open,
     #adminmenu li.focused.wp-not-current-submenu .wp-submenu,
     #adminmenu li.focused.wp-has-current-submenu .wp-submenu,
@@ -130,27 +162,14 @@
         padding: 0 8px 8px 0;
     }
 
-    .no-js #adminmenu .wp-has-current-submenu:hover .wp-submenu,
-    #adminmenu .wp-has-current-submenu .wp-submenu {
-        padding: 0;
-    }
-
-    #adminmenu .wp-submenu a {
-        font-size: 14px;
-        line-height: 40px;
-    }
-
-    #adminmenu a.menu-top,
     #adminmenu .wp-submenu-head {
-        font-size: 13px;
-        line-height: 18px;
+        font-family: @baseFontFamily;
+        font-size: @baseFontSize * 1.25;
+        line-height: @baseLineHeight * 1.2;
+        padding: 15px 10px;
+        .admin-menu-item-divider( bottom, solid, #d5d5d5, #f2f2f2 );
     }
 
-    #adminmenu div.wp-submenu-head {
-        display: block;
-    }
-
-    #adminmenu a.menu-top,
     body.no-js #adminmenu .wp-menu-toggle,
     #adminmenu div.wp-menu-toggle {
         display: none;
@@ -178,7 +197,6 @@
         .menu-icon-site { .icon-position-state ( 12 ) }
     }
 
-
     #adminmenu li {
         margin: 0 10px;
         padding: 0;
@@ -187,17 +205,10 @@
 
     #adminmenu a {
         display: block;
-        line-height: 24px;
-        padding: 2px 5px;
     }
 
-    #adminmenu a.menu-top {
-        font-weight: bold;
-        line-height: 18px;
-        min-width: 10em;
-        padding: 5px 5px;
-        border-width: 1px 0 1px;
-        border-style: solid;
+    #adminmenu a.menu-top { // this is for the menu in WP when not collapsed
+        display: none;
     }
 
     #adminmenu li.wp-menu-open {
@@ -205,104 +216,56 @@
 //        border-style: solid;
     }
 
-    #adminmenu li li {
-        margin-left: 8px;
-    }
-
     #adminmenu .wp-submenu a,
     #adminmenu li li a,
     #adminmenu .wp-not-current-submenu li a {
-        padding-left: 12px;
+        padding: 10px 10px;
+        font-size: @baseFontSize;
+        line-height: @baseLineHeight;
     }
 
-    #adminmenu .wp-not-current-submenu li a {
-        padding-left: 18px;
-    }
-
-    #adminmenu li li {
-        margin-left: 0;
-    }
-
-    #adminmenu li li a {
-        padding-left: 0;
+    #adminmenu .wp-menu-arrow {
+        display: none;
     }
 
     .wp-menu-arrow {
-        display: none;
         cursor: auto;
         z-index: 25;
         position: absolute;
-        right: 100%;
-        margin: 0;
-        height: 30px;
-        width: 6px;
-    }
-
-    #adminmenu li.wp-has-current-submenu .wp-menu-arrow,
-    #adminmenu li.menu-top:hover .wp-menu-arrow,
-    #adminmenu li.current .wp-menu-arrow,
-    #adminmenu li.focused .wp-menu-arrow,
-    #adminmenu li.menu-top.wp-has-submenu:hover .wp-menu-arrow div {
-        display: block;
-    }
-
-    #adminmenu li.wp-not-current-submenu:hover .wp-menu-arrow div {
-        display: none;
-    }
-
-    #adminmenu li.menu-top:hover .wp-menu-arrow,
-    #adminmenu li.menu-top.focused .wp-menu-arrow {
-        z-index: 1001;
-    }
-
-    .ie8 #adminmenu li.menu-top:hover .wp-menu-arrow {
-        display: none;
+        margin: 17px 0 0 0;
+        border-color: transparent #d5d5d5 transparent transparent;
+        border-style: solid;
+        border-width: 10px;
+        height: 0;
+        width: 0;
+        right: 0;
     }
 
     #adminmenu .wp-menu-arrow div {
-        position: absolute;
-        top: 7px;
-        left: -1px;
-        width: 14px;
-        height: 15px;
-    }
-
-    #adminmenu li.wp-not-current-submenu .wp-menu-arrow {
-        height: 28px;
-        border-width: 1px 0;
+        position: relative;
+        top: -10px;
+        width: 0;
+        height: 0;
+        right: 8px;
+        border-color: transparent #ededed transparent transparent;
         border-style: solid;
+        border-width: 10px 9px 10px 10px;
     }
 
-    .wp-menu-arrow {
-
-    }
-
-    #adminmenu .wp-not-current-submenu .wp-menu-arrow div {
-        width: 15px;
-        top: 6px;
-        border-width: 0 0 1px 1px;
-        border-style: solid;
-    }
-
-    .wp-menu-arrow,
-    #adminmenu li.menu-top:hover .wp-menu-arrow {
-        display: none;
-    }
-
-    #adminmenu li.current:hover .wp-menu-arrow,
-    #adminmenu li.menu-top.wp-menu-open:hover .wp-menu-arrow {
+    #adminmenu li.wp-has-current-submenu .wp-menu-arrow,
+    #adminmenu li.current .wp-menu-arrow {
         display: block;
-        z-index: 125;
     }
 
     #adminmenu .wp-submenu li {
         padding: 0;
         margin: 0;
+        .admin-menu-item-divider( top, dotted, #d5d5d5, transparent );
     }
 
     #adminmenu li.menu-top {
-//        border-width: 1px 0;
-//        border-style: solid none;
+        min-height: 54px;
+        .admin-menu-item-divider( top, solid, #dcdcdc, transparent );
     }
 
     #adminmenu .wp-menu-image img {
@@ -351,11 +314,6 @@
 //        border-style: solid;
     }
 
-    #adminmenu .wp-submenu a {
-        padding-left: 10px;
-        margin: 0;
-    }
-
     #adminmenu .wp-menu-toggle {
         width: 18px;
         clear: right;
@@ -367,7 +325,8 @@
     }
 
     #adminmenu .wp-menu-image a {
-        height: 24px;
+        height: 54px;
+        width: 44px;
     }
 
     #adminmenu .awaiting-mod,
@@ -407,7 +366,7 @@
         #adminmenuwrap,
         #adminmenu,
         #adminmenu li.menu-top {
-            width: 32px;
+            width: 44px;
         }
 
         #adminmenu .wp-has-current-submenu .wp-submenu {
@@ -433,7 +392,6 @@
             padding: 0 8px 8px 0;
         }
 
-        #adminmenu a.menu-top,
         #adminmenu div.wp-menu-toggle {
             display: none;
         }
@@ -450,27 +408,9 @@
             padding-left: 0;
         }
 
-        .wp-menu-arrow {
-            -moz-transform:    translate( 33px );
-            -webkit-transform: translate( 33px );
-            -o-transform:      translate( 33px );
-            -ms-transform:     translate( 33px );
-            transform:         translate( 33px );
-        }
-
-        #adminmenu li.menu-top:hover .wp-menu-arrow {
-            display: none;
-        }
-
-        #adminmenu li.current:hover .wp-menu-arrow,
-        #adminmenu li.menu-top.wp-menu-open:hover .wp-menu-arrow {
-            display: block;
-            z-index: 125;
-        }
-
         #adminmenu li.menu-top {
-            border-width: 1px 0;
-            border-style: solid none;
+            min-height: 54px;
+            position: relative;
         }
 
         #adminmenu .wp-submenu .wp-submenu-wrap {
