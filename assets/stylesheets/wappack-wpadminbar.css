@@ -97,7 +97,7 @@ html.wp-toolbar {
   height: 56px;
   line-height: 56px;
   display: block;
-  padding: 0 17px;
+  padding: 0 16px;
   margin: 0;
   font-size: 14px;
 }
@@ -437,7 +437,7 @@ html.wp-toolbar {
 #wp-admin-bar-wp-logo > .ab-item .ab-icon {
   width: 32px;
   height: 32px;
-  margin: 14px 0;
+  margin: 12px 0;
   background-image: url(../images/wappack-logo.png);
   background-position: 0 0;
   background-repeat: no-repeat;

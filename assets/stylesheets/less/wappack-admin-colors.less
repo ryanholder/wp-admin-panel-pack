@@ -19,6 +19,7 @@ TABLE OF CONTENTS:
 /*------------------------------------------------------------------------------
   1.0 - Left to Right Styles
 ------------------------------------------------------------------------------*/
+@iconMenuSpritePath:      "../images/adminmenu-icons.png";
 
 html,
 .wp-dialog {
@@ -1297,22 +1298,11 @@ table.widefat .spam a:hover,
 	background: transparent url(../images/arrows-vs.png) no-repeat -2px 6px;
 }
 
-#adminmenu a.menu-top,
-.folded #adminmenu li.menu-top,
-#adminmenu .wp-submenu .wp-submenu-head {
-	border-top-color: #ffffff;
-	border-bottom-color: #cae6ff;
-}
-
-#adminmenu li.wp-menu-open {
-	border-color: #d1e5ee;
-}
 
 #adminmenu li.menu-top:hover > a,
 #adminmenu li.menu-top.focused > a,
 #adminmenu li.menu-top > a:focus {
 	background-color: #e0f1ff;
-	text-shadow: 0 1px 0 rgba( 255, 255, 255, 0.4 );
 }
 
 #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
@@ -1321,23 +1311,11 @@ table.widefat .spam a:hover,
 .folded #adminmenu li.current.menu-top,
 #adminmenu .wp-menu-arrow,
 #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head {
-	background-color: #5589AA; /* Fallback */
-	background-image: -ms-linear-gradient(bottom, #5589AA, #619bbb); /* IE10 */
-	background-image: -moz-linear-gradient(bottom, #5589AA, #619bbb); /* Firefox */
-	background-image: -o-linear-gradient(bottom, #5589AA, #619bbb); /* Opera */
-	background-image: -webkit-gradient(linear, left bottom, left top, from(#5589AA), to(#619bbb)); /* old Webkit */
-	background-image: -webkit-linear-gradient(bottom, #5589AA, #619bbb); /* new Webkit */
-	background-image: linear-gradient(bottom, #5589AA, #619bbb); /* proposed W3C Markup */
+	background-color: transparent; /* Fallback */
 }
 
 #adminmenu .wp-menu-arrow div {
 	background-color: #5589AA; /* Fallback */
-	background-image: -ms-linear-gradient(right bottom, #5589AA, #619bbb); /* IE10 */
-	background-image: -moz-linear-gradient(right bottom, #5589AA, #619bbb); /* Firefox */
-	background-image: -o-linear-gradient(right bottom, #5589AA, #619bbb); /* Opera */
-	background-image: -webkit-gradient(linear, right bottom, left top, from(#5589AA), to(#619bbb)); /* old Webkit */
-	background-image: -webkit-linear-gradient(right bottom, #5589AA, #619bbb); /* new Webkit */
-	background-image: linear-gradient(right bottom, #5589AA, #619bbb); /* proposed W3C Markup */
 }
 
 #adminmenu li.wp-not-current-submenu .wp-menu-arrow {
@@ -1351,23 +1329,10 @@ table.widefat .spam a:hover,
 	border-color: #cae6ff;
 }
 
-.folded #adminmenu li.menu-top li:hover a {
-	background-image: none;
-}
-
 #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
 #adminmenu li.current a.menu-top,
 #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head {
-	text-shadow: 0 -1px 0 #333;
-	color: #fff;
-	border-top-color: #5A8FAD;
-	border-bottom-color: #5589AA;
-}
-
-.folded #adminmenu li.wp-has-current-submenu,
-.folded #adminmenu li.current.menu-top {
-	border-top-color: #5A8FAD;
-	border-bottom-color: #5589AA;
+	color: #222;
 }
 
 #adminmenu .wp-submenu a:hover,
@@ -1383,19 +1348,7 @@ table.widefat .spam a:hover,
 }
 
 #adminmenu .wp-submenu ul {
-	background-color: #fff;
-}
-
-#adminmenu .wp-submenu-wrap,
-#adminmenu .wp-submenu ul {
-	border-color: #d0dfe9;
-}
-
-#adminmenu .wp-submenu-wrap,
-.folded #adminmenu .wp-has-current-submenu .wp-submenu-wrap {
-	-moz-box-shadow: 2px 2px 5px rgba( 0, 0, 0, 0.4 );
-	-webkit-box-shadow: 2px 2px 5px rgba( 0, 0, 0, 0.4 );
-	box-shadow: 2px 2px 5px rgba( 0, 0, 0, 0.4 );
+	background-color: transparent;
 }
 
 #adminmenu .wp-submenu .wp-submenu-head {
@@ -1407,67 +1360,12 @@ table.widefat .spam a:hover,
 	background-color: transparent;
 }
 
-/* collapse menu button */
-#collapse-menu {
-	color: #A0C3D5;
-}
-
-#collapse-menu:hover {
-	color: #5A8FAD;
-}
-
-#collapse-button {
-	border-color: #d0dfe9;
-	background-color: #eff8ff; /* Fallback */
-	background-image: -ms-linear-gradient(bottom, #eff8ff, #fff); /* IE10 */
-	background-image: -moz-linear-gradient(bottom, #eff8ff, #fff); /* Firefox */
-	background-image: -o-linear-gradient(bottom, #eff8ff, #fff); /* Opera */
-	background-image: -webkit-gradient(linear, left bottom, left top, from(#eff8ff), to(#fff)); /* old Webkit */
-	background-image: -webkit-linear-gradient(bottom, #eff8ff, #fff); /* new Webkit */
-	background-image: linear-gradient(bottom, #eff8ff, #fff); /* proposed W3C Markup */
-}
-#collapse-menu:hover #collapse-button {
-	border-color: #A0C3D5;
-}
-#collapse-button div {
-	background: transparent url(../images/arrows-vs.png) no-repeat 0 -72px;
-}
-.folded #collapse-button div {
-	background-position: 0 -108px;
-}
-
 /* Auto-folding of the admin menu */
 @media only screen and (max-width: 900px) {
-	#adminmenu li.menu-top {
-		border-top-color: #ffffff;
-		border-bottom-color: #cae6ff;
-	}
 
 	#adminmenu li.wp-has-current-submenu,
 	#adminmenu li.current.menu-top {
 		background-color: #5589AA; /* Fallback */
-		background-image: -ms-linear-gradient(bottom, #5589AA, #619bbb); /* IE10 */
-		background-image: -moz-linear-gradient(bottom, #5589AA, #619bbb); /* Firefox */
-		background-image: -o-linear-gradient(bottom, #5589AA, #619bbb); /* Opera */
-		background-image: -webkit-gradient(linear, left bottom, left top, from(#5589AA), to(#619bbb)); /* old Webkit */
-		background-image: -webkit-linear-gradient(bottom, #5589AA, #619bbb); /* new Webkit */
-		background-image: linear-gradient(bottom, #5589AA, #619bbb); /* proposed W3C Markup */
-	}
-
-	#adminmenu li.menu-top li:hover a {
-		background-image: none;
-	}
-
-	#adminmenu li.wp-has-current-submenu,
-	#adminmenu li.current.menu-top {
-		border-top-color: #5A8FAD;
-		border-bottom-color: #5589AA;
-	}
-
-	#adminmenu .wp-has-current-submenu .wp-submenu-wrap {
-		-moz-box-shadow: 2px 2px 5px rgba( 0, 0, 0, 0.4 );
-		-webkit-box-shadow: 2px 2px 5px rgba( 0, 0, 0, 0.4 );
-		box-shadow: 2px 2px 5px rgba( 0, 0, 0, 0.4 );
 	}
 
 	#collapse-button div {
@@ -1484,163 +1382,68 @@ div.wp-menu-image {
 }
 
 .icon16.icon-dashboard,
-.menu-icon-dashboard div.wp-menu-image,
 .icon16.icon-post,
-.menu-icon-post div.wp-menu-image,
 .icon16.icon-media,
-.menu-icon-media div.wp-menu-image,
 .icon16.icon-links,
-.menu-icon-links div.wp-menu-image,
 .icon16.icon-page,
-.menu-icon-page div.wp-menu-image,
 .icon16.icon-comments,
-.menu-icon-comments div.wp-menu-image,
 .icon16.icon-appearance,
-.menu-icon-appearance div.wp-menu-image,
 .icon16.icon-plugins,
-.menu-icon-plugins div.wp-menu-image,
 .icon16.icon-users,
-.menu-icon-users div.wp-menu-image,
 .icon16.icon-tools,
-.menu-icon-tools div.wp-menu-image,
 .icon16.icon-settings,
-.menu-icon-settings div.wp-menu-image,
-.icon16.icon-site,
-.menu-icon-site div.wp-menu-image {
-	background-image: url('../images/menu-vs.png?ver=20120201');
+.icon16.icon-site {
+	background-image: url(../images/menu.png?ver=20120201);
 }
 
-.icon16.icon-dashboard,
-#adminmenu .menu-icon-dashboard div.wp-menu-image {
+.icon16.icon-dashboard {
 	background-position: -59px -33px;
 }
 
-#adminmenu .menu-icon-dashboard:hover div.wp-menu-image,
-#adminmenu .menu-icon-dashboard.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-dashboard.current div.wp-menu-image {
-	background-position: -59px -1px;
-}
-
-.icon16.icon-post,
-#adminmenu .menu-icon-post div.wp-menu-image {
+.icon16.icon-post {
 	background-position: -269px -33px;
 }
 
-#adminmenu .menu-icon-post:hover div.wp-menu-image,
-#adminmenu .menu-icon-post.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-post.current div.wp-menu-image {
-	background-position: -269px -1px;
-}
-
-.icon16.icon-media,
-#adminmenu .menu-icon-media div.wp-menu-image {
+.icon16.icon-media {
 	background-position: -119px -33px;
 }
 
-#adminmenu .menu-icon-media:hover div.wp-menu-image,
-#adminmenu .menu-icon-media.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-media.current div.wp-menu-image {
-	background-position: -119px -1px;
-}
-
-.icon16.icon-links,
-#adminmenu .menu-icon-links div.wp-menu-image {
+.icon16.icon-links {
 	background-position: -89px -33px;
 }
 
-#adminmenu .menu-icon-links:hover div.wp-menu-image,
-#adminmenu .menu-icon-links.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-links.current div.wp-menu-image {
-	background-position: -89px -1px;
-}
-
-.icon16.icon-page,
-#adminmenu .menu-icon-page div.wp-menu-image {
+.icon16.icon-page {
 	background-position: -149px -33px;
 }
 
-#adminmenu .menu-icon-page:hover div.wp-menu-image,
-#adminmenu .menu-icon-page.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-page.current div.wp-menu-image {
-	background-position: -149px -1px;
-}
-
-.icon16.icon-comments,
-#adminmenu .menu-icon-comments div.wp-menu-image {
+.icon16.icon-comments {
 	background-position: -29px -33px;
 }
 
-#adminmenu .menu-icon-comments:hover div.wp-menu-image,
-#adminmenu .menu-icon-comments.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-comments.current div.wp-menu-image {
-	background-position: -29px -1px;
-}
-
-.icon16.icon-appearance,
-#adminmenu .menu-icon-appearance div.wp-menu-image {
+.icon16.icon-appearance {
 	background-position: 1px -33px;
 }
 
-#adminmenu .menu-icon-appearance:hover div.wp-menu-image,
-#adminmenu .menu-icon-appearance.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-appearance.current div.wp-menu-image {
-	background-position: 1px -1px;
-}
-
-.icon16.icon-plugins,
-#adminmenu .menu-icon-plugins div.wp-menu-image {
+.icon16.icon-plugins {
 	background-position: -179px -33px;
 }
 
-#adminmenu .menu-icon-plugins:hover div.wp-menu-image,
-#adminmenu .menu-icon-plugins.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-plugins.current div.wp-menu-image {
-	background-position: -179px -1px;
-}
-
-.icon16.icon-users,
-#adminmenu .menu-icon-users div.wp-menu-image {
+.icon16.icon-users {
 	background-position: -300px -33px;
 }
 
-#adminmenu .menu-icon-users:hover div.wp-menu-image,
-#adminmenu .menu-icon-users.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-users.current div.wp-menu-image {
-	background-position: -300px -1px;
-}
-
-.icon16.icon-tools,
-#adminmenu .menu-icon-tools div.wp-menu-image {
+.icon16.icon-tools {
 	background-position: -209px -33px;
 }
 
-#adminmenu .menu-icon-tools:hover div.wp-menu-image,
-#adminmenu .menu-icon-tools.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-tools.current div.wp-menu-image {
-	background-position: -209px -1px;
-}
-
-.icon16.icon-settings,
-#adminmenu .menu-icon-settings div.wp-menu-image {
+.icon16.icon-settings {
 	background-position: -239px -33px;
 }
 
-#adminmenu .menu-icon-settings:hover div.wp-menu-image,
-#adminmenu .menu-icon-settings.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-settings.current div.wp-menu-image {
-	background-position: -239px -1px;
-}
-
-.icon16.icon-site,
-#adminmenu .menu-icon-site div.wp-menu-image {
+.icon16.icon-site {
 	background-position: -359px -33px;
 }
 
-#adminmenu .menu-icon-site:hover div.wp-menu-image,
-#adminmenu .menu-icon-site.wp-has-current-submenu div.wp-menu-image,
-#adminmenu .menu-icon-site.current div.wp-menu-image {
-	background-position: -359px -1px;
-}
 /* end menu and screen icons */
 
 /* Screen Icons */
