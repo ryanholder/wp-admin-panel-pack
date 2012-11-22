@@ -110,9 +110,25 @@
         bottom: 0;
     }
 
+// TODO could add arrow pointing to content area on the adminmenushadow div
     #adminmenushadow {
-        display: none;
-    // TODO could add arrow pointing to content area on the adminmenushadow div
+        position: absolute;
+        left: 269px;
+        top: 17px;
+        border-width: 10px 10px 10px 0;
+        border-style: solid;
+        border-color: transparent #d5d5d5 transparent transparent;
+        z-index: 50;
+    }
+
+    #adminmenushadow:after {
+        content: ' ';
+        position: absolute;
+        left: 2px;
+        top: -10px;
+        border-width: 10px 9px 10px 0;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent;
     }
 
 /* side admin menu */

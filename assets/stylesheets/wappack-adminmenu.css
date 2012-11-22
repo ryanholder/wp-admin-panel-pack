@@ -37,7 +37,22 @@
   bottom: 0;
 }
 .wappack-admin #adminmenushadow {
-  display: none;
+  position: absolute;
+  left: 269px;
+  top: 17px;
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #d5d5d5 transparent transparent;
+  z-index: 50;
+}
+.wappack-admin #adminmenushadow:after {
+  content: ' ';
+  position: absolute;
+  left: 2px;
+  top: -10px;
+  border-width: 10px 9px 10px 0;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
 }
 .wappack-admin #adminmenu * {
   -webkit-user-select: none;
