@@ -147,11 +147,12 @@ class WordPressAdminPanelPack {
 	 */
 	public function register_admin_styles() {
 
+        wp_enqueue_style( 'wappack-bootstrap', WAP_PACK_URL .  'vendor/bootstrap/css/bootstrap.css' );
         wp_enqueue_style( 'wappack-wpadminbar', WAP_PACK_URL .  'assets/stylesheets/wappack-wpadminbar.css' );
         wp_enqueue_style( 'wappack-admin', WAP_PACK_URL .  'assets/stylesheets/wappack-admin.css' );
         wp_enqueue_style( 'wappack-admin-colors', WAP_PACK_URL .  'assets/stylesheets/wappack-admin-colors.css' );
-        wp_enqueue_style( 'wappack-admin-other', WAP_PACK_URL .  'assets/stylesheets/wappack-admin-other.css' );
         wp_enqueue_style( 'wappack-adminmenu', WAP_PACK_URL .  'assets/stylesheets/wappack-adminmenu.css' );
+
 
 	} // end register_admin_styles
 
@@ -160,7 +161,7 @@ class WordPressAdminPanelPack {
 	 */	
 	public function register_admin_scripts() {
 
-		wp_enqueue_script( 'wappack-admin-scripts', WAP_PACK_URL . 'assets/javascripts/admin.js' );
+		wp_enqueue_script( 'wappack-bootstrap-scripts', WAP_PACK_URL . 'vendor/bootstrap/js/bootstrap.js', array( 'jquery' ) );
 	
 	} // end register_admin_scripts
 	

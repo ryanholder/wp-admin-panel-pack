@@ -79,7 +79,6 @@
         width: 64px;
     }
 
-
     #adminmenuback {
         background: #ededed;
         padding: 0;
@@ -87,7 +86,6 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        z-index: -1;
     }
 
     #adminmenu {
@@ -101,6 +99,7 @@
     #adminmenuwrap {
         border-width: 0 1px 0 0;
         border-style: solid;
+        border-color: #d5d5d5;
     }
 
     #adminmenuwrap {
@@ -118,7 +117,6 @@
         border-width: 10px 10px 10px 0;
         border-style: solid;
         border-color: transparent #d5d5d5 transparent transparent;
-        z-index: 50;
     }
 
     #adminmenushadow:after {
@@ -153,7 +151,6 @@
         position: absolute;
         top: 0;
         left: 65px;
-        z-index: 999;
         overflow: hidden;
     }
 
@@ -201,7 +198,7 @@
     #adminmenu {
         .menu-icon-dashboard { .icon-position-state ( 3 ) }
         .menu-icon-post { .icon-position-state ( 11 ) }
-        .menu-icon-media { .icon-position-state ( 5 ) } // TODO change the media icon
+        .menu-icon-media { .icon-position-state ( 5 ) }
         .menu-icon-links { .icon-position-state ( 4 ) }
         .menu-icon-page { .icon-position-state ( 6 ) }
         .menu-icon-comments { .icon-position-state ( 2 ) }
@@ -246,7 +243,6 @@
 
     .wp-menu-arrow {
         cursor: auto;
-        z-index: 25;
         position: absolute;
         margin: 17px 0 0 0;
         border-color: transparent #d5d5d5 transparent transparent;
@@ -326,8 +322,8 @@
     }
 
     #adminmenu .wp-submenu ul {
-//        border-width: 0 0 0 1px;
-//        border-style: solid;
+        padding: 0;
+        margin: 0;
     }
 
     #adminmenu .wp-menu-toggle {
@@ -389,7 +385,6 @@
             display: none;
             position: absolute;
             width: 145px;
-            z-index: 999;
             overflow: hidden;
         }
 
