@@ -1,5 +1,9 @@
 <?php
-class Wappack_Admin_Bar extends WP_Admin_Bar {
+/*
+ * This is used to extend the WP_Admin_Bar class and change the markup according to Bootstrap
+ */
+class WAPPACK_Admin_Bar {
+
 	private $nodes = array();
 	private $bound = false;
 	public $user;
@@ -233,7 +237,14 @@ class Wappack_Admin_Bar extends WP_Admin_Bar {
 			}
 
 			// Generate the group class (we distinguish between top level and other level groups).
-			$group_class = ( $node->parent == 'root' ) ? 'ab-top-menu' : 'ab-submenu';
+
+			if ( $node->parent == 'root' ) {
+				$group_class = 'ab-top-menu';
+			} else {
+				$group_class = 'dropdown-menu ab-submenu';
+				$node->meta['role'] = 'menu';
+				$node->meta['arialabelledby'] = 'dLabel';
+			}
 
 			if ( $node->type == 'group' ) {
 				if ( empty( $node->meta['class'] ) )
@@ -369,7 +380,11 @@ class Wappack_Admin_Bar extends WP_Admin_Bar {
 
 		$class = empty( $node->meta['class'] ) ? '' : $node->meta['class'];
 
-		?><ul id="<?php echo esc_attr( 'wp-admin-bar-' . $node->id ); ?>" class="<?php echo esc_attr( $class ); ?>"><?php
+		$role = empty( $node->meta['role'] ) ? '' : $node->meta['role'];
+
+		$arialabelledby = empty( $node->meta['arialabelledby'] ) ? '' : $node->meta['arialabelledby'];
+
+		?><ul id="<?php echo esc_attr( 'wp-admin-bar-' . $node->id ); ?>" class="<?php echo esc_attr( $class ); ?>" role="<?php echo esc_attr( $role ); ?>" aria-labelledby="<?php echo esc_attr( $arialabelledby ); ?>"><?php
 			foreach ( $node->children as $item ) {
 				$this->_render_item( $item );
 			}
@@ -386,11 +401,9 @@ class Wappack_Admin_Bar extends WP_Admin_Bar {
 		$tabindex = isset( $node->meta['tabindex'] ) ? (int) $node->meta['tabindex'] : 10;
 
 		$menuclass = '';
-		$aria_attributes = 'tabindex="' . $tabindex . '"';
 
 		if ( $is_parent ) {
 			$menuclass = 'dropdown';
-			$aria_attributes .= ' aria-haspopup="true"';
 		}
 
 		if ( ! empty( $node->meta['class'] ) )
@@ -400,7 +413,7 @@ class Wappack_Admin_Bar extends WP_Admin_Bar {
 
 		<li id="<?php echo esc_attr( 'wp-admin-bar-' . $node->id ); ?>" class="<?php echo esc_attr( $menuclass ); ?>"><?php
 			if ( $has_link ):
-				?><a class="ab-item" <?php echo $aria_attributes; ?> href="<?php echo esc_url( $node->href ) ?>"<?php
+				?><a class="ab-item dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="<?php echo esc_url( $node->href ) ?>"<?php
 					if ( ! empty( $node->meta['onclick'] ) ) :
 						?> onclick="<?php echo esc_js( $node->meta['onclick'] ); ?>"<?php
 					endif;
@@ -412,7 +425,7 @@ class Wappack_Admin_Bar extends WP_Admin_Bar {
 				endif;
 				?>><?php
 			else:
-				?><div class="ab-item ab-empty-item" <?php echo $aria_attributes;
+				?><div class="ab-item ab-empty-item" <?php
 				if ( ! empty( $node->meta['title'] ) ) :
 					?> title="<?php echo esc_attr( $node->meta['title'] ); ?>"<?php
 				endif;
@@ -422,17 +435,15 @@ class Wappack_Admin_Bar extends WP_Admin_Bar {
 			echo $node->title;
 
 			if ( $has_link ) :
-				?></a><?php
+				?></a><b class="caret"></b><?php
 			else:
 				?></div><?php
 			endif;
 
 			if ( $is_parent ) :
-				?><div class="ab-sub-wrapper"><?php
-					foreach ( $node->children as $group ) {
-						$this->_render_group( $group );
-					}
-				?></div><?php
+				foreach ( $node->children as $group ) {
+					$this->_render_group( $group );
+				}
 			endif;
 
 			if ( ! empty( $node->meta['html'] ) )
@@ -470,4 +481,5 @@ class Wappack_Admin_Bar extends WP_Admin_Bar {
 
 		do_action( 'add_admin_bar_menus' );
 	}
+
 }

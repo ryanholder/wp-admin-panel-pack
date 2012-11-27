@@ -84,8 +84,8 @@ class WordPressAdminPanelPack {
 
 		add_filter( 'admin_body_class', array( $this, 'wappack_add_admin_body_class' ) );
 
-//		add_filter( 'wp_admin_bar_class', array( $this, 'wappack_custom_admin_bar_class' ) );
-		add_action( 'wp_admin_bar_class', array( $this, 'wappack_custom_admin_bar_class' ) );
+		add_filter( 'wp_admin_bar_class', array( $this, 'wappack_custom_admin_bar_class' ) );
+//		add_action( 'wp_admin_bar_class', array( $this, 'wappack_custom_admin_bar_class' ) );
 
 
 //		remove_action( 'init', '_wp_admin_bar_init' );
@@ -269,8 +269,13 @@ class WordPressAdminPanelPack {
 
 	}
 
-	function wappack_custom_admin_bar_class( $admin_bar_class ) {
+	function wappack_custom_admin_bar_class() {
+
 		require_once WAP_PACK_DIR . '/wappack-class-wp-admin-bar.php';
+
+		$admin_bar_class = 'WAPPACK_Admin_Bar';
+		return $admin_bar_class;
+
 	}
 /*function wappack_wp_admin_bar_init() {
 	global $wp_admin_bar;
