@@ -12,7 +12,7 @@ html.wp-toolbar {
 	padding-top: 57px;
 }
 
-.wappack-admin #wpadminbar * {
+/*.wappack-admin #wpadminbar * {
     height: auto;
     width: auto;
     margin: 0;
@@ -23,10 +23,6 @@ html.wp-toolbar {
     line-height: 1;
     font: normal 13px/28px sans-serif;
     color: #fff;
-}
-
-.wappack-admin #wpadminbar {
-    border-bottom: 1px solid #2a2a2a;
 }
 
 .wappack-admin #wpadminbar ul li:before,
@@ -42,24 +38,61 @@ html.wp-toolbar {
     border: 0;
     text-decoration: none;
     background: 0
+}*/
+
+.navbar-fixed-top .navbar-inner {
+  background-color: #303030;
+  background-image: none;
+  border: 1px solid #2a2a2a;
+  padding: 0 10px;
+}
+
+.navbar .nav > li {
+  margin: 0;
+}
+
+.navbar .nav > li > a {
+  color: #fff;
+  text-shadow: none;
+  font-size: 14px;
+  line-height: 56px;
+  padding: 0;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: #fff;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: transparent;
+  color: #fff;
+}
+
+#wp-admin-bar-site-name > a {
+  font-size: 23px;
+  text-transform: uppercase;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
 }
 
 .wappack-admin #wpadminbar {
     direction: ltr;
     color: #ccc;
-    font: normal 13px/28px sans-serif;
-    height: 56px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-width: 600px;
-    z-index: 99999;
+
+//    font: normal 13px/28px sans-serif;
+//    position: fixed;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    min-width: 600px;
+//    z-index: 99999;
     background-color: #303030;
-    background-image: none;
+//    background-image: none;
 }
 
-.wappack-admin #wpadminbar .ab-sub-wrapper, .wappack-admin #wpadminbar ul, .wappack-admin #wpadminbar ul li {
+/*.wappack-admin #wpadminbar .ab-sub-wrapper, .wappack-admin #wpadminbar ul, .wappack-admin #wpadminbar ul li {
     background: 0;
     clear: none;
     list-style: none;
@@ -121,7 +154,7 @@ html.wp-toolbar {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
     color: #fff;
     padding: 0;
-}
+}*/
 
 /*.wappack-admin #wpadminbar .menupop .ab-sub-wrapper, .wappack-admin #wpadminbar .shortlink-input {
     margin: 0 0 0 -1px;
@@ -153,6 +186,7 @@ html.wp-toolbar {
     margin: 0 -1px 0 0
 }*/
 
+/*
 .wappack-admin #wpadminbar .ab-sub-wrapper>.ab-submenu:first-child {
     border-top: 0
 }
@@ -165,6 +199,7 @@ html.wp-toolbar {
 .wappack-admin #wpadminbar .selected .shortlink-input {
     display: block
 }
+*/
 
 /*.wappack-admin #wpadminbar .quicklinks .menupop ul li {
     float: none
@@ -182,13 +217,13 @@ html.wp-toolbar {
     min-width: 140px
 }*/
 
-.wappack-admin #wpadminbar .shortlink-input {
+/*.wappack-admin #wpadminbar .shortlink-input {
     width: 200px
 }
 
 .wappack-admin #wpadminbar.nojs li:hover>.ab-sub-wrapper, .wappack-admin #wpadminbar li.hover>.ab-sub-wrapper {
     display: block
-}
+}*/
 
 /*.wappack-admin #wpadminbar .menupop li:hover>.ab-sub-wrapper, .wappack-admin #wpadminbar .menupop li.hover>.ab-sub-wrapper {
     margin-left: 100%;
@@ -202,11 +237,11 @@ html.wp-toolbar {
     right: 100%
 }*/
 
-.wappack-admin #wpadminbar .ab-top-menu>li:hover>.ab-item, .wappack-admin #wpadminbar .ab-top-menu>li.hover>.ab-item, .wappack-admin #wpadminbar .ab-top-menu>li>.ab-item:focus, .wappack-admin #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus {
+/*.wappack-admin #wpadminbar .ab-top-menu>li:hover>.ab-item, .wappack-admin #wpadminbar .ab-top-menu>li.hover>.ab-item, .wappack-admin #wpadminbar .ab-top-menu>li>.ab-item:focus, .wappack-admin #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus {
     color: #fff;
     background-color: #303030;
     background-image: none;
-}
+}*/
 
 /*.wappack-admin #wpadminbar.nojs .ab-top-menu>li.menupop:hover>.ab-item,
 .wappack-admin #wpadminbar .ab-top-menu>li.menupop.hover>.ab-item {
@@ -217,9 +252,9 @@ html.wp-toolbar {
     border-left-color: transparent
 }*/
 
-.wappack-admin #wpadminbar .hover .ab-label, .wappack-admin #wpadminbar.nojq .ab-item:focus .ab-label {
+/*.wappack-admin #wpadminbar .hover .ab-label, .wappack-admin #wpadminbar.nojq .ab-item:focus .ab-label {
     color: #fafafa
-}
+}*/
 
 /*.wappack-admin #wpadminbar .menupop.hover .ab-label {
     color: #333;
@@ -230,10 +265,10 @@ html.wp-toolbar {
     background-color: #eaf2fa
 }*/
 
-.wappack-admin #wpadminbar .ab-submenu .ab-item {
+/*.wappack-admin #wpadminbar .ab-submenu .ab-item {
     color: #333;
     text-shadow: none
-}
+}*/
 
 /*.wappack-admin #wpadminbar .quicklinks .menupop ul li a, .wappack-admin #wpadminbar .quicklinks .menupop ul li a strong, .wappack-admin #wpadminbar .quicklinks .menupop.hover ul li a, .wappack-admin #wpadminbar.nojs .quicklinks .menupop:hover ul li a {
     color: #21759b
@@ -270,7 +305,7 @@ html.wp-toolbar {
     background-color: #dfdfdf
 }*/
 
-.wappack-admin #wpadminbar .quicklinks a span#ab-updates {
+/*.wappack-admin #wpadminbar .quicklinks a span#ab-updates {
     background: #eee;
     color: #333;
     text-shadow: none;
@@ -525,7 +560,7 @@ html.wp-toolbar {
 
 .no-customize-support .hide-if-no-customize, .customize-support .hide-if-customize {
     display: none
-}
+}*/
 
 /*@media only screen and (-webkit-min-device-pixel-ratio:1.5) {
     .wappack-admin #wpadminbar .menupop .menupop>.ab-item, .wappack-admin #wpadminbar .ab-top-secondary .menupop .menupop>.ab-item, .wappack-admin #wpadminbar #adminbarsearch .adminbar-input, #wp-admin-bar-wp-logo>.ab-item .ab-icon, #wp-admin-bar-updates>.ab-item .ab-icon, #wp-admin-bar-comments>.ab-item .ab-icon, .wappack-admin #wpadminbar #wp-admin-bar-new-content>.ab-item .ab-icon {
@@ -534,14 +569,14 @@ html.wp-toolbar {
     }
 }*/
 
-* html .wappack-admin #wpadminbar {
+/** html .wappack-admin #wpadminbar {
     overflow: hidden;
     position: absolute
 }
 
 * html .wappack-admin #wpadminbar .quicklinks ul li a {
     float: left
-}
+}*/
 
 /*
 * html .wappack-admin #wpadminbar .menupop a span {

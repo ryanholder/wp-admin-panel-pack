@@ -238,13 +238,7 @@ class WAPPACK_Admin_Bar {
 
 			// Generate the group class (we distinguish between top level and other level groups).
 
-			if ( $node->parent == 'root' ) {
-				$group_class = 'ab-top-menu';
-			} else {
-				$group_class = 'dropdown-menu ab-submenu';
-				$node->meta['role'] = 'menu';
-				$node->meta['arialabelledby'] = 'dLabel';
-			}
+			$group_class = ( $node->parent == 'root' ) ? 'ab-top-menu nav' : 'ab-submenu dropdown-menu';
 
 			if ( $node->type == 'group' ) {
 				if ( empty( $node->meta['class'] ) )
@@ -349,8 +343,8 @@ class WAPPACK_Admin_Bar {
 		}
 
 		?>
-		<div id="wpadminbar" class="<?php echo $class; ?>" role="navigation">
-			<div class="quicklinks">
+		<div id="wpadminbar" class="<?php echo $class; ?> navbar navbar-fixed-top" role="navigation">
+			<div class="navbar-inner">
 				<?php foreach ( $root->children as $group ) {
 					$this->_render_group( $group );
 				} ?>
@@ -380,11 +374,10 @@ class WAPPACK_Admin_Bar {
 
 		$class = empty( $node->meta['class'] ) ? '' : $node->meta['class'];
 
-		$role = empty( $node->meta['role'] ) ? '' : $node->meta['role'];
+		if ( $node->id == 'top-secondary' )
+			$class .= ' pull-right';
 
-		$arialabelledby = empty( $node->meta['arialabelledby'] ) ? '' : $node->meta['arialabelledby'];
-
-		?><ul id="<?php echo esc_attr( 'wp-admin-bar-' . $node->id ); ?>" class="<?php echo esc_attr( $class ); ?>" role="<?php echo esc_attr( $role ); ?>" aria-labelledby="<?php echo esc_attr( $arialabelledby ); ?>"><?php
+		?><ul id="<?php echo esc_attr( 'wp-admin-bar-' . $node->id ); ?>" class="<?php echo esc_attr( $class ); ?>"><?php
 			foreach ( $node->children as $item ) {
 				$this->_render_item( $item );
 			}
@@ -401,9 +394,11 @@ class WAPPACK_Admin_Bar {
 		$tabindex = isset( $node->meta['tabindex'] ) ? (int) $node->meta['tabindex'] : 10;
 
 		$menuclass = '';
+		$aria_attributes = 'tabindex="' . $tabindex . '"';
 
 		if ( $is_parent ) {
 			$menuclass = 'dropdown';
+			$aria_attributes .= ' aria-haspopup="true"';
 		}
 
 		if ( ! empty( $node->meta['class'] ) )
@@ -413,7 +408,7 @@ class WAPPACK_Admin_Bar {
 
 		<li id="<?php echo esc_attr( 'wp-admin-bar-' . $node->id ); ?>" class="<?php echo esc_attr( $menuclass ); ?>"><?php
 			if ( $has_link ):
-				?><a class="ab-item dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="<?php echo esc_url( $node->href ) ?>"<?php
+				?><a class="ab-item dropdown-toggle" <?php echo $aria_attributes; ?> id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="<?php echo esc_url( $node->href ) ?>"<?php
 					if ( ! empty( $node->meta['onclick'] ) ) :
 						?> onclick="<?php echo esc_js( $node->meta['onclick'] ); ?>"<?php
 					endif;
@@ -425,7 +420,7 @@ class WAPPACK_Admin_Bar {
 				endif;
 				?>><?php
 			else:
-				?><div class="ab-item ab-empty-item" <?php
+				?><div class="ab-item ab-empty-item" <?php echo $aria_attributes;
 				if ( ! empty( $node->meta['title'] ) ) :
 					?> title="<?php echo esc_attr( $node->meta['title'] ); ?>"<?php
 				endif;
@@ -435,7 +430,7 @@ class WAPPACK_Admin_Bar {
 			echo $node->title;
 
 			if ( $has_link ) :
-				?></a><b class="caret"></b><?php
+				?></a><?php
 			else:
 				?></div><?php
 			endif;
