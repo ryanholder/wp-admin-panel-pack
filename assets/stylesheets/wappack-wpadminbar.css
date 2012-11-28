@@ -67,6 +67,10 @@ html.wp-toolbar {
   text-transform: uppercase;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
 }
+#adminmenu .tooltip-inner {
+  white-space: nowrap;
+  overflow: hidden;
+}
 .wappack-admin #wpadminbar {
   direction: ltr;
   color: #ccc;

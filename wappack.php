@@ -80,7 +80,8 @@ class WordPressAdminPanelPack {
 
 		add_action( 'admin_menu', array( $this, 'wappack_disable_admin_menu_items' ) );
 
-		add_action( 'admin_bar_menu', array( $this, 'wappack_admin_bar_custom_menu' ) );
+		add_action( 'admin_bar_menu', array( $this, 'wappack_admin_bar_custom_logo' ) );
+		add_action( 'admin_bar_menu', array( $this, 'wappack_admin_bar_custom_account_menu' ) );
 
 		add_filter( 'admin_body_class', array( $this, 'wappack_add_admin_body_class' ) );
 
@@ -141,7 +142,7 @@ class WordPressAdminPanelPack {
 	public function deregister_admin_scripts() {
 
 		wp_deregister_script( 'admin-bar' );
-		//wp_enqueue_script( 'wappack-admin-scripts', WAP_PACK_URL . 'assets/javascripts/admin.js' );
+		//wp_enqueue_script( 'wappack-admin-scripts', WAP_PACK_URL . 'assets/javascripts/wappack-admin.js' );
 
 	} // end deregister_admin_scripts
 
@@ -166,6 +167,7 @@ class WordPressAdminPanelPack {
 	public function register_admin_scripts() {
 
 		wp_enqueue_script( 'wappack-bootstrap-scripts', WAP_PACK_URL . 'vendor/bootstrap/js/bootstrap.js', array( 'jquery' ) );
+		wp_enqueue_script( 'wappack-custom-scripts', WAP_PACK_URL . 'assets/javascripts/wappack-admin.js', array( 'wappack-bootstrap-scripts' ) );
 
 	} // end register_admin_scripts
 
@@ -236,7 +238,9 @@ class WordPressAdminPanelPack {
 
 	} // end wappack_add_admin_body_class
 
-	function wappack_admin_bar_custom_menu( $wp_admin_bar ) {
+	function wappack_admin_bar_custom_account_menu() {
+
+		global $wp_admin_bar;
 
 		$user_id = get_current_user_id();
 		$current_user = wp_get_current_user();
@@ -258,6 +262,21 @@ class WordPressAdminPanelPack {
 				'class' => $class,
 				'title' => __( 'My Account' ),
 			),
+		) );
+
+	}
+
+	function wappack_admin_bar_custom_logo() {
+
+		global $wp_admin_bar;
+
+		$class = apply_filters( 'wappack_custom_logo_classes', 'wappack-logo' );
+
+		/* Add the main siteadmin menu item */
+		$wp_admin_bar->add_menu( array(
+			'id'     => 'wappack-custom-logo',
+			'title'  => '<span></span>',
+			'meta'   => array( 'class' => $class ),
 		) );
 
 	}
