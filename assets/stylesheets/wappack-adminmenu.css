@@ -5,13 +5,6 @@
 
 }
 .wappack-admin #adminmenuback {
-  width: 194px;
-}
-.wappack-admin #adminmenu {
-  width: 64px;
-}
-.wappack-admin #adminmenuback {
-  background: #ededed;
   padding: 0;
   width: 279px;
   position: absolute;
@@ -19,22 +12,28 @@
   bottom: 0;
 }
 .wappack-admin #adminmenu {
+  background: #fff;
+  width: 64px;
   float: left;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-.wappack-admin #adminmenuback,
-.wappack-admin #adminmenuwrap {
   border-width: 0 1px 0 0;
   border-style: solid;
   border-color: #d5d5d5;
-}
-.wappack-admin #adminmenuwrap {
-  float: left;
   position: absolute;
   top: 0;
   bottom: 0;
+}
+.wappack-admin #adminmenuwrap {
+  position: fixed;
+  top: 58px;
+  bottom: 0;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: #d5d5d5;
+  width: 279px;
+  background: #ededed;
 }
 .wappack-admin #adminmenushadow {
   position: absolute;
@@ -357,9 +356,6 @@
   .wappack-admin #footer {
     margin-left: 52px;
   }
-  .wappack-admin #adminmenuback,
-  .wappack-admin #adminmenuwrap,
-  .wappack-admin #adminmenu,
   .wappack-admin #adminmenu li.menu-top {
     width: 44px;
   }
