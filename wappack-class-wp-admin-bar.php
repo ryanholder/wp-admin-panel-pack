@@ -430,7 +430,7 @@ class WAPPACK_Admin_Bar {
 			echo $node->title;
 
 			if ( $has_link ) :
-				?></a><?php
+				?><span class="caret"></span></a><?php
 			else:
 				?></div><?php
 			endif;

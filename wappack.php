@@ -76,8 +76,6 @@ class WordPressAdminPanelPack {
 
 		add_action( 'admin_head', array( $this, 'wappack_admin_head' ) );
 
-		add_action( 'wp_before_admin_bar_render', array( $this, 'wappack_admin_bar_render' ) );
-
 		add_action( 'admin_menu', array( $this, 'wappack_disable_admin_menu_items' ) );
 
 		add_action( 'admin_bar_menu', array( $this, 'wappack_admin_bar_custom_logo' ) );
@@ -199,29 +197,6 @@ class WordPressAdminPanelPack {
 		// TODO define your action method here
 
 	} // end wappack_admin_head
-
-
-	/** Removing menu options from the Admin Bar
-	 * TODO I may want to remove the loading of styles and scipts for admin bar in favor of my own - (see line 36-53 of class-wp-admin-bar.php)
-	 *
-	 */
-	function wappack_admin_bar_render() {
-
-		global $wp_admin_bar;
-
-        $wp_admin_bar->remove_menu( 'wp-logo' );
-		$wp_admin_bar->remove_menu( 'comments' );
-		$wp_admin_bar->remove_menu( 'new-content' );
-
-		/**
-		 * Remove the sub menu items from the site-name menu
-		 */
-		$wp_admin_bar->remove_menu( 'appearance' );
-		$wp_admin_bar->remove_menu( 'dashboard' );
-		$wp_admin_bar->remove_menu( 'edit-site' );
-//        $wp_admin_bar->remove_menu('view-site');
-
-	} // end wappack_admin_bar_render
 
 	function wappack_disable_admin_menu_items() {
 
