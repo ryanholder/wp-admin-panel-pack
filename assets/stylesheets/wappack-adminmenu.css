@@ -1,8 +1,6 @@
 .wappack-admin {
   /* side admin menu */
 
-  /* Auto-folding of the admin menu */
-
 }
 .wappack-admin #adminmenuback {
   padding: 0;
@@ -348,57 +346,6 @@
 .wappack-admin #adminmenu li span.count-0,
 .wappack-admin #sidemenu li a .count-0 {
   display: none;
-}
-@media only screen and (max-width: 900px) {
-  .wappack-admin #wpcontent,
-  .wappack-admin #footer {
-    margin-left: 52px;
-  }
-  .wappack-admin #adminmenu li.menu-top {
-    width: 44px;
-  }
-  .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
-    display: none;
-    position: absolute;
-    width: 145px;
-    overflow: hidden;
-  }
-  .wappack-admin #adminmenu li .wp-submenu,
-  .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
-    top: -5px;
-    left: 26px;
-  }
-  .wappack-admin #adminmenu li.focused.wp-has-current-submenu .wp-submenu {
-    padding: 0 8px 8px 0;
-  }
-  .wappack-admin #adminmenu div.wp-menu-toggle {
-    display: none;
-  }
-  .wappack-admin #adminmenu .wp-not-current-submenu li a {
-    padding-left: 12px;
-  }
-  .wappack-admin #adminmenu li li {
-    margin-left: 0;
-  }
-  .wappack-admin #adminmenu li li a {
-    padding-left: 0;
-  }
-  .wappack-admin #adminmenu li.menu-top {
-    min-height: 54px;
-    position: relative;
-  }
-  .wappack-admin #adminmenu .wp-submenu .wp-submenu-wrap {
-    margin-top: 3px;
-  }
-  .wappack-admin #adminmenu .wp-has-current-submenu {
-    margin-bottom: 1px;
-  }
-  .wappack-admin #adminmenu .wp-has-current-submenu.menu-top-last {
-    margin-bottom: 0;
-  }
-  .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu-wrap {
-    margin-top: 4px;
-  }
 }
 .wappack-admin #collapse-menu {
   display: none;
