@@ -76,10 +76,14 @@
 .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
   display: block;
 }
-.wappack-admin #adminmenu .wp-submenu.sub-open,
+.wappack-admin #adminmenu .wp-has-current-submenu-loaded .wp-submenu {
+  display: none;
+}
+.wappack-admin #adminmenu .wp-has-current-submenu-preloaded .wp-submenu {
+  display: block;
+}
 .wappack-admin #adminmenu li.focused.wp-not-current-submenu .wp-submenu,
 .wappack-admin #adminmenu li.focused.wp-has-current-submenu .wp-submenu,
-.wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
 .wappack-admin .no-js #adminmenu .wp-has-submenu:hover .wp-submenu,
 .wappack-admin .no-js #adminmenu .wp-has-current-submenu:hover .wp-submenu {
   padding: 0 8px 8px 0;
@@ -365,16 +369,12 @@
     width: 145px;
     overflow: hidden;
   }
-  .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu.sub-open {
-    display: block;
-  }
   .wappack-admin #adminmenu li .wp-submenu,
   .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
     top: -5px;
     left: 26px;
   }
-  .wappack-admin #adminmenu li.focused.wp-has-current-submenu .wp-submenu,
-  .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu.sub-open {
+  .wappack-admin #adminmenu li.focused.wp-has-current-submenu .wp-submenu {
     padding: 0 8px 8px 0;
   }
   .wappack-admin #adminmenu div.wp-menu-toggle {

@@ -142,6 +142,7 @@ class WordPressAdminPanelPack {
 	public function deregister_admin_scripts() {
 
 		wp_deregister_script( 'admin-bar' );
+		wp_deregister_script( 'common' );
 		//wp_enqueue_script( 'wappack-admin-scripts', WAP_PACK_URL . 'assets/javascripts/wappack-admin.js' );
 
 	} // end deregister_admin_scripts

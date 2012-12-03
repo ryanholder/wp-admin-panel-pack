@@ -76,6 +76,22 @@ html.wp-toolbar {
   color: #ccc;
   background-color: #303030;
 }
+
+#wp-admin-bar-my-account > a > .avatar {
+	border-radius: 14px;
+	margin: 0 10px 0 0;
+}
+
+.wappack-logo > .ab-item {
+    width: 32px;
+    height: 32px;
+    margin: 12px 15px 0 5px;
+    background-image: url(../images/wappack-logo.png);
+    background-position: 0 0;
+    background-repeat: no-repeat
+}
+
+
 /*.wappack-admin #wpadminbar .ab-sub-wrapper, .wappack-admin #wpadminbar ul, .wappack-admin #wpadminbar ul li {
     background: 0;
     clear: none;
