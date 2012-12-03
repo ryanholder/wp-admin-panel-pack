@@ -76,12 +76,6 @@
 .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
   display: block;
 }
-.wappack-admin #adminmenu .wp-has-current-submenu-loaded .wp-submenu {
-  display: none;
-}
-.wappack-admin #adminmenu .wp-has-current-submenu-preloaded .wp-submenu {
-  display: block;
-}
 .wappack-admin #adminmenu li.focused.wp-not-current-submenu .wp-submenu,
 .wappack-admin #adminmenu li.focused.wp-has-current-submenu .wp-submenu,
 .wappack-admin .no-js #adminmenu .wp-has-submenu:hover .wp-submenu,
