@@ -5032,9 +5032,9 @@ html.wp-toolbar {
 .navbar-fixed-top .navbar-inner {
   background-color: #303030;
   background-image: none;
-  border: 1px solid #2a2a2a;
+  border-bottom: 1px solid #2a2a2a;
   padding: 0 15px;
-  height: 54px;
+  height: 56px;
 }
 .navbar .nav > li {
   margin: 0;
@@ -5075,14 +5075,6 @@ html.wp-toolbar {
   -moz-border-radius: 14px;
   border-radius: 14px;
   margin: 0 10px 0 0;
-}
-.wappack-logo > .ab-item {
-  width: 32px;
-  height: 32px;
-  margin: 12px 15px 0 0;
-  background-image: url(../images/wappack-logo.png);
-  background-position: 0 0;
-  background-repeat: no-repeat;
 }
 /*.wappack-admin #wpadminbar .ab-sub-wrapper, .wappack-admin #wpadminbar ul, .wappack-admin #wpadminbar ul li {
     background: 0;
@@ -6670,7 +6662,7 @@ strong .post-com-count {
       8.0 - Layout Blocks
     ------------------------------------------------------------------------------*/
 html.wp-toolbar {
-  padding-top: 56px;
+  padding-top: 57px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -13567,7 +13559,7 @@ div.widgets-sortables,
 }
 .wappack-admin #adminmenuwrap {
   position: fixed;
-  top: 56px;
+  top: 57px;
   bottom: 0;
   border-width: 0 1px 0 0;
   border-style: solid;

@@ -31,7 +31,7 @@ define( 'WAP_PACK_DIR', dirname( __FILE__ ) );
 define( 'WAP_PACK_URL', plugin_dir_url( __FILE__ ) );
 define( 'WAP_PACK_VERSION', "0.1" );
 
-require_once WAP_PACK_DIR . '/debug/admin-screen-information.php';
+//require_once WAP_PACK_DIR . '/debug/admin-screen-information.php';
 
 class WordPressAdminPanelPack {
 
@@ -78,7 +78,6 @@ class WordPressAdminPanelPack {
 
 		add_action( 'admin_menu', array( $this, 'wappack_disable_admin_menu_items' ) );
 
-		add_action( 'admin_bar_menu', array( $this, 'wappack_admin_bar_custom_logo' ) );
 		add_action( 'admin_bar_menu', array( $this, 'wappack_admin_bar_custom_account_menu' ) );
 
 		add_filter( 'admin_body_class', array( $this, 'wappack_add_admin_body_class' ) );
@@ -241,22 +240,7 @@ class WordPressAdminPanelPack {
 
 	}
 
-	function wappack_admin_bar_custom_logo() {
-
-		global $wp_admin_bar;
-
-		$class = apply_filters( 'wappack_custom_logo_classes', 'wappack-logo' );
-
-		/* Add the main siteadmin menu item */
-		$wp_admin_bar->add_menu( array(
-			'id'     => 'wappack-custom-logo',
-			'title'  => '<span></span>',
-			'meta'   => array( 'class' => $class ),
-		) );
-
-	}
-
-	function wappack_custom_admin_bar_class( $admin_bar_class ) {
+	function wappack_custom_admin_bar_class() {
 
 		require_once WAP_PACK_DIR . '/wappack-class-wp-admin-bar.php';
 
@@ -264,28 +248,6 @@ class WordPressAdminPanelPack {
 		return $admin_bar_class;
 
 	}
-/*function wappack_wp_admin_bar_init() {
-	global $wp_admin_bar;
-
-	if ( ! is_admin_bar_showing() )
-		return false;
-
-	// Load the admin bar class code ready for instantiation
-	require( WAP_PACK_DIR . '/wappack-class-wp-admin-bar.php' );
-
-	// Instantiate the admin bar
-	$admin_bar_class = apply_filters( 'wp_admin_bar_class', 'WP_Admin_Bar' );
-	if ( class_exists( $admin_bar_class ) )
-		$wp_admin_bar = new $admin_bar_class;
-	else
-		return false;
-
-	$wp_admin_bar->initialize();
-	$wp_admin_bar->add_menus();
-
-	return true;
-}*/
-
 
 } // end class
 

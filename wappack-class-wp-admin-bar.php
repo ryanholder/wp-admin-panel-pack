@@ -419,7 +419,7 @@ class WAPPACK_Admin_Bar {
 					?> title="<?php echo esc_attr( $node->meta['title'] ); ?>"<?php
 				endif;
 				?>><?php
-			else:
+			else: // TODO When adding a custom menu item with no link then we have a div that is wasting space, could add argument to specify custom and then not create div
 				?><div class="ab-item ab-empty-item" <?php echo $aria_attributes;
 				if ( ! empty( $node->meta['title'] ) ) :
 					?> title="<?php echo esc_attr( $node->meta['title'] ); ?>"<?php
