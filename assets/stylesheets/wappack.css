@@ -13538,7 +13538,7 @@ div.widgets-sortables,
 }
 .wappack-admin #adminmenuback {
   padding: 0;
-  width: 279px;
+  width: 264px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -13564,12 +13564,12 @@ div.widgets-sortables,
   border-width: 0 1px 0 0;
   border-style: solid;
   border-color: #d5d5d5;
-  width: 279px;
+  width: 264px;
   background: #ededed;
 }
 .wappack-admin #adminmenushadow {
   position: absolute;
-  left: 269px;
+  left: 264px;
   top: 17px;
   border-width: 10px 10px 10px 0;
   border-style: solid;
@@ -13592,7 +13592,7 @@ div.widgets-sortables,
 .wappack-admin #adminmenu .wp-submenu,
 .wappack-admin #adminmenu .wp-submenu-wrap,
 .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
-  width: 194px;
+  width: 180px;
 }
 .wappack-admin #adminmenu .wp-submenu,
 .wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
