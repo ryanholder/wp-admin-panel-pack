@@ -13005,69 +13005,6 @@ div.wp-menu-image {
 #icon-ms-admin {
   background-position: -659px -5px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
-  .icon32.icon-post,
-  #icon-edit,
-  #icon-post,
-  .icon32.icon-dashboard,
-  #icon-index,
-  .icon32.icon-media,
-  #icon-upload,
-  .icon32.icon-links,
-  #icon-link-manager,
-  #icon-link,
-  #icon-link-category,
-  .icon32.icon-page,
-  #icon-edit-pages,
-  #icon-page,
-  .icon32.icon-comments,
-  #icon-edit-comments,
-  .icon32.icon-appearance,
-  #icon-themes,
-  .icon32.icon-plugins,
-  #icon-plugins,
-  .icon32.icon-users,
-  #icon-users,
-  #icon-profile,
-  #icon-user-edit,
-  .icon32.icon-tools,
-  #icon-tools,
-  #icon-admin,
-  .icon32.icon-settings,
-  #icon-options-general,
-  .icon32.icon-site,
-  #icon-ms-admin {
-    background-image: url("http://www.wapp.dev/wp-admin/images/icons32-2x.png?ver=20120412");
-    background-size: 708px 45px;
-  }
-  .icon16.icon-dashboard,
-  .menu-icon-dashboard div.wp-menu-image,
-  .icon16.icon-post,
-  .menu-icon-post div.wp-menu-image,
-  .icon16.icon-media,
-  .menu-icon-media div.wp-menu-image,
-  .icon16.icon-links,
-  .menu-icon-links div.wp-menu-image,
-  .icon16.icon-page,
-  .menu-icon-page div.wp-menu-image,
-  .icon16.icon-comments,
-  .menu-icon-comments div.wp-menu-image,
-  .icon16.icon-appearance,
-  .menu-icon-appearance div.wp-menu-image,
-  .icon16.icon-plugins,
-  .menu-icon-plugins div.wp-menu-image,
-  .icon16.icon-users,
-  .menu-icon-users div.wp-menu-image,
-  .icon16.icon-tools,
-  .menu-icon-tools div.wp-menu-image,
-  .icon16.icon-settings,
-  .menu-icon-settings div.wp-menu-image,
-  .icon16.icon-site,
-  .menu-icon-site div.wp-menu-image {
-    background-image: url("http://www.wapp.dev/wp-admin/images/menu-2x.png?ver=20120412");
-    background-size: 390px 64px;
-  }
-}
 /* end screen icons */
 /* Diff */
 table.diff .diff-deletedline {
@@ -13614,7 +13551,7 @@ div.widgets-sortables,
 .wappack-admin .no-js #adminmenu .wp-has-current-submenu:hover .wp-submenu {
   padding: 0 8px 8px 0;
 }
-.wappack-admin #adminmenu .wp-submenu-head {
+.wappack-admin #adminmenu .wp-submenu .wp-submenu-head {
   font-size: 17.5px;
   line-height: 24px;
   padding: 15px 10px;
@@ -13761,7 +13698,7 @@ div.widgets-sortables,
 .wappack-admin #adminmenu a {
   display: block;
 }
-.wappack-admin #adminmenu a.menu-top {
+.wappack-admin #adminmenu a .wp-menu-name {
   display: none;
 }
 .wappack-admin #adminmenu .wp-submenu a,
@@ -13880,6 +13817,7 @@ div.widgets-sortables,
 .wappack-admin #sidemenu li a .count-0 {
   display: none;
 }
-.wappack-admin #collapse-menu {
+.wappack-admin #collapse-menu,
+.wappack-admin .screen-reader-shortcut {
   display: none;
 }

@@ -100,7 +100,7 @@
 	padding: 0 8px 8px 0;
   }
 
-  #adminmenu .wp-submenu-head {
+  #adminmenu .wp-submenu .wp-submenu-head {
 	font-size: @baseFontSize * 1.25;
 	line-height: @baseLineHeight * 1.2;
 	padding: 15px 10px;
@@ -144,7 +144,7 @@
 	display: block;
   }
 
-  #adminmenu a.menu-top { // this is for the menu in WP when not collapsed
+  #adminmenu a .wp-menu-name { // this is for the menu in WP when not collapsed
 	display: none;
   }
 
@@ -268,7 +268,8 @@
 	display: none;
   }
 
-  #collapse-menu {
+  #collapse-menu,
+  .screen-reader-shortcut {
 	display: none;
   }
 
