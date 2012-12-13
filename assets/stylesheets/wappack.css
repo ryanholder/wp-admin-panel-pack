@@ -13555,6 +13555,7 @@ div.widgets-sortables,
   font-size: 17.5px;
   line-height: 24px;
   padding: 15px 10px;
+  border-top: 0px;
   border-bottom: 1px solid #d5d5d5;
   -webkit-box-shadow: 0 1px 0 #f2f2f2;
   -moz-box-shadow: 0 1px 0 #f2f2f2;
