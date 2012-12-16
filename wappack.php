@@ -61,7 +61,7 @@ class WordPressAdminPanelPack {
 
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
 		register_deactivation_hook( __FILE__, array( $this, 'deactivate' ) );
-		register_uninstall_hook( __FILE__, array( $this, 'uninstall' ) );
+		register_uninstall_hook( __FILE__, 'WordPressAdminPanelPack::uninstall' );
 
 		/*
 		 * Define the custom functionality for your plugin. The first parameter of the
@@ -109,7 +109,7 @@ class WordPressAdminPanelPack {
 	 *
 	 * @params    $network_wide    True if WPMU superadmin uses "Network Activate" action, false if WPMU is disabled or plugin is activated on an individual blog
 	 */
-	public function uninstall( $network_wide ) {
+	public static function uninstall( $network_wide ) {
 		// TODO define uninstall functionality here
 	} // end uninstall
 
