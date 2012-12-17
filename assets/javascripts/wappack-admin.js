@@ -4,17 +4,17 @@
 
     $(function () {
 
-        $('.menu-top > .wp-menu-image').tooltip({
+        $('a.menu-top > .wp-menu-image').tooltip({
             title:function () {
-                $(this).find('span > span').removeClass().addClass('badge'); //TODO concerned the span > span might not always be true, need better solution
-                var title = $(this).siblings('.menu-top').html();
+                $(this).siblings('.wp-menu-name').find('span > span').removeClass().addClass('badge');
+                var title = $(this).siblings('.wp-menu-name').html();
                 return title;
             },
             placement:'right',
             html:'true'
 
         });
-
+        
     });
 
 }(jQuery));

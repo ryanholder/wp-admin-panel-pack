@@ -147,14 +147,7 @@ class WordPressAdminPanelPack {
 	 */
 	public function register_admin_styles() {
 
-//		wp_enqueue_style( 'wappack-bootstrap', WAP_PACK_URL . 'vendor/bootstrap/css/bootstrap.css' );
-//		wp_enqueue_style( 'wappack-wpadminbar', WAP_PACK_URL . 'assets/stylesheets/wappack-wpadminbar.css' );
-//		wp_enqueue_style( 'wappack-wpadminbar-old', WAP_PACK_URL . 'assets/stylesheets/wappack-wpadminbar-old.css' );
-//		wp_enqueue_style( 'wappack-admin', WAP_PACK_URL . 'assets/stylesheets/wappack-admin.css' );
-//		wp_enqueue_style( 'wappack-admin-colors', WAP_PACK_URL . 'assets/stylesheets/wappack-admin-colors.css' );
-//		wp_enqueue_style( 'wappack-adminmenu', WAP_PACK_URL . 'assets/stylesheets/wappack-adminmenu.css' );
 		wp_enqueue_style( 'wappack', WAP_PACK_URL . 'assets/stylesheets/wappack.css' );
-
 
 	} // end register_admin_styles
 
