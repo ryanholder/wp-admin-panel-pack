@@ -51,8 +51,6 @@ class WAPPACK_Admin_Bar {
 
 		add_action('wp_head', $header_callback);
 
-		wp_enqueue_script( 'admin-bar' );
-		wp_enqueue_style( 'admin-bar' );
 
 		do_action( 'admin_bar_init' );
 	}
