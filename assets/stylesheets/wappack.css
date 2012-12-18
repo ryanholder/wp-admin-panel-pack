@@ -13506,7 +13506,7 @@ div.widgets-sortables,
 }
 .wappack-admin #adminmenushadow {
   position: absolute;
-  left: 264px;
+  left: 254px;
   top: 17px;
   border-width: 10px 10px 10px 0;
   border-style: solid;
@@ -13526,17 +13526,12 @@ div.widgets-sortables,
   -moz-user-select: none;
   user-select: none;
 }
-.wappack-admin #adminmenu .wp-submenu,
-.wappack-admin #adminmenu .wp-submenu-wrap,
-.wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
-  width: 180px;
-}
-.wappack-admin #adminmenu .wp-submenu,
-.wappack-admin #adminmenu .wp-has-current-submenu .wp-submenu {
+.wappack-admin #adminmenu .wp-submenu {
   list-style: none;
   padding: 0;
   margin: 0 10px;
   display: none;
+  width: 180px;
   position: absolute;
   top: 0;
   left: 65px;
@@ -13790,9 +13785,6 @@ div.widgets-sortables,
   padding: 0;
   border-width: 1px 0 0 0;
   border-style: solid;
-}
-.wappack-admin #adminmenu li .wp-submenu-wrap {
-  position: relative;
 }
 .wappack-admin #adminmenu .wp-has-current-submenu.menu-top-last {
   margin-bottom: 0;
