@@ -389,6 +389,19 @@ class WAPPACK_Admin_Bar {
 		$is_parent = ! empty( $node->children );
 		$has_link  = ! empty( $node->href );
 
+
+        if ( isset( $node->meta['data-toggle'] ) ) {
+            $data_toggle =  'data-toggle="' . esc_attr($node->meta['data-toggle']) . '"';
+            $data_toggle_class =  ' dropdown-toggle';
+            $data_toggle_caret =  '<span class="caret"></span>';
+        } else {
+            $data_toggle =  '';
+            $data_toggle_class =  '';
+            $data_toggle_caret = '';
+        }
+
+        $data_target = isset( $node->meta['data-target'] ) ? 'data-target="' . esc_attr($node->meta['data-target']) . '"' : '';
+
 		$tabindex = isset( $node->meta['tabindex'] ) ? (int) $node->meta['tabindex'] : 10;
 
 		$menuclass = '';
@@ -406,7 +419,7 @@ class WAPPACK_Admin_Bar {
 
 		<li id="<?php echo esc_attr( 'wp-admin-bar-' . $node->id ); ?>" class="<?php echo esc_attr( $menuclass ); ?>"><?php
 			if ( $has_link ):
-				?><a class="ab-item dropdown-toggle" <?php echo $aria_attributes; ?> id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="<?php echo esc_url( $node->href ) ?>"<?php
+				?><a class="ab-item<?php echo $data_toggle_class; ?>" <?php echo $aria_attributes; ?> id="dLabel" role="button" <?php echo $data_toggle; ?> <?php echo $data_target; ?> href="<?php echo esc_url( $node->href ) ?>"<?php
 					if ( ! empty( $node->meta['onclick'] ) ) :
 						?> onclick="<?php echo esc_js( $node->meta['onclick'] ); ?>"<?php
 					endif;
@@ -428,7 +441,7 @@ class WAPPACK_Admin_Bar {
 			echo $node->title;
 
 			if ( $has_link ) :
-				?><span class="caret"></span></a><?php
+				?><?php echo $data_toggle_caret; ?></a><?php
 			else:
 				?></div><?php
 			endif;
